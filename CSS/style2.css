@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.login-body{
+    background-image: url("../Images/NU.jpg");
+    width: 100%;
+    height: 100%;
+}
+
+.login-container{
+    position: absolute;
+    padding: 15px;
+    top: 50%;
+    left: 50%;
+    width: 50rem;
+    height: 70%;
+    transform: translate(-50%,-50%);
+    //border: 1px black solid;
+    background-color: #09203f;
+    text-align: center;
+    box-shadow: 0 10px 20px #000000;
+    border-radius: 10px;
+}
+
+.logo{
+    position: relative;
+    top:15%;
+    left:19%;
+    transform: translate(-50%, -50%);
+    width: 11%;
+    height: 18.5%;
+    text-align: center;
+}
+
+.logo2{
+    position: relative;
+    top:15%;
+    left:50%;
+    margin-top: 1rem;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+}
+
+.img{
+    background-image: url("../Images/National_University_(Philippines)_Logo_New.png");
+    background-size: 100% 100%;
+}
+
+
+.login-title{
+    position: relative;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    float: left;
+    margin-top: 1.4rem;
+    top:50%;
+    left:19%;
+    transform: translate(-50%, -50%);
+}
+
+.lrc-title{
+    position: relative;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    float: left;
+    margin-top: 9rem;
+    top:50%;
+    left:4.2%;
+    transform: translate(-50%, -50%);
+}
+
+.login-form{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+
+.contain2{
+    position: absolute;
+    padding: 40px 50px;
+    width: 30rem;
+    height: 99.9%;
+    top: 49.9%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    background-color: whitesmoke;
+    color: #33408e;text-align: left;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+
+.input{
+    padding: 3px;
+    margin-top: 3em;
+    width: 20rem;
+    border: none;
+    border-bottom: 2px #33408e solid;
+    background-color: whitesmoke;
+}
+
+.login-button{
+    position: relative;
+    margin-top: 3rem;
+    padding: 5px;
+    width: 20rem;
+    color: whitesmoke;
+    background-color: #33408e;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.input:focus{
+    outline: none;
+    padding: 3px;
+    border-bottom: 2px #fed51b solid;
+    transition: all .4s ease;
+}
+
+.header-container{
+    position: relative;
+    width: 81.7%;
+    transition: .2s;
+}
+
+.header{
+    position: fixed;
+    left: 250px;
+    width: 100%;
+    padding: 5px;
+    height: 3.2rem;
+    border-radius: 0;
+    box-shadow: 2px 0 7px #000000;
+    background-color: rgb(229,227,230);
+    //background-color: #33408e;
+    transition: .2s;
+    z-index: 100;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: blue;
+    box-shadow: 0 3px 7px #000000;
+    transition: .2s ease-in-out;
+    color: #fed51b;
+    z-index: 101;
+}
+
+.menu{
+    position: relative;
+    width: 2rem;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.img2{
+    background-image: url("../Images/menu.png");
+    background-size: 100% 100%;
+}
+
+.sidebar-header{
+    padding: 30px;
+    font-size: 1rem;
+}
+
+.sidebar-links{
+    margin-top: -2rem;
+    margin-left: 10px;
+    width: 100%;
+}
+
+li{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    color: whitesmoke;
+    border-left: 10px transparent;
+    cursor: pointer;
+}
+
+ul li{
+    text-decoration: none;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+li:hover{
+    background-color: #3c3f42;
+    border-left: 10px #1b1e21 solid;
+    margin-left: -10px;
+}
+
+.link-icon{
+    padding: 10px;
+    width: 1.5rem;
+    height: auto;
+    -webkit-filter: invert(90%);
+}
+
+.image1{
+    background-image: url("../Images/home.png");
+    background-size: 100% 100%;
+}
+
+.image2{
+    background-image: url("../Images/dashboard.png");
+    background-size: 100% 100%;
+}
+
+.image3{
+    background-image: url("../Images/bookmark.png");
+    background-size: 100% 100%;
+}
+
+.image4{
+    background-image: url("../Images/book.png");
+    background-size: 100% 100%;
+}
+
+.image5{
+    background-image: url("../Images/report.png");
+    background-size: 100% 100%;
+}
+
+.image6{
+    background-image: url("../Images/user.png");
+    background-size: 100% 100%;
+}
+
+.link{
+    margin-left: 1.5rem;
+}
+
+/*#selected{
+    background-color: #3c3f42;
+    border-left: 10px #1b1e21 solid;
+    margin-left: -10px;
+}*/
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

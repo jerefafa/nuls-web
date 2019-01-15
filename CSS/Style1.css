@@ -1,0 +1,46 @@
+html, body{
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(#fdfbfb,#ebedee);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#container {
+    padding-left: 300px;
+}
+
+#content {
+    padding: 20px;
+    margin: auto;
+}
+
+@media only screen and (max-width : 992px) {
+    #container {
+        padding-left: 0px;
+    }
+}
+
+.nav-background{
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.sidebar-header{
+    background-color: #09203f;
+    color: #FDFDFD;
+}
+
+.sidebar-background{
+    background: linear-gradient(#cfd9df, #e2ebf0);
+}
+
+.material-icons{
+    color: #33408e;
+}
+
+.btn{
+    background-color: #09203f;
+}
+
+
