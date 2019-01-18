@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $query);
             <li><a href="MaterialType.php">Material Type</a></li>
             <li><a href="Subtype.php">Subtype</a></li>
             <li><a href="Program.php">Colleges</a></li>
-            <li><a href="Courses.php">Courses</a> </li>
+            <li><a href="Courses.php">Programs</a> </li>
             <li><a href="Users.php">Patrons</a></li>
         </ul>
     </nav>
@@ -50,7 +50,7 @@ $result = mysqli_query($conn, $query);
 
                 <div class="input-field col s4">
                     <select required  name="program">
-                        <option value="" disabled selected>Program</option>
+                        <option value="" disabled selected>College</option>
                         <?php while($row1 = mysqli_fetch_array($result)):;?>
                         <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
                         <?php endwhile;?>

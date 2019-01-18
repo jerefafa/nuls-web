@@ -8,10 +8,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Catalog_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circulation_Print.php" beforeDir="false" afterPath="$PROJECT_DIR$/Circulation_Print.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circulation_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Circulation_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_circulation.php" beforeDir="false" afterPath="$PROJECT_DIR$/generate_circulation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_MaterialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_MaterialType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_Subtype.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Subtype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Add_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets.php" beforeDir="false" afterPath="$PROJECT_DIR$/Assets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/Courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaterialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/MaterialType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subtype.php" beforeDir="false" afterPath="$PROJECT_DIR$/Subtype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_MaterialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_MaterialType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_Subtype.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Subtype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update_Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/Users.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +55,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserManagementList.php">
+        <entry file="file://$PROJECT_DIR$/Add_Subtype.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="101" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="101" />
+            <state relative-caret-position="109">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Program.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
               <folding>
-                <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Add_Program.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Update_Program.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Courses.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+              <folding>
                 <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -50,97 +106,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
+        <entry file="file://$PROJECT_DIR$/Add_Course.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="105" column="102" selection-start-line="105" selection-start-column="102" selection-end-line="105" selection-end-column="102" />
+            <state relative-caret-position="109">
+              <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Acquisition_Report.php">
+        <entry file="file://$PROJECT_DIR$/Update_Course.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="101" />
+            <state relative-caret-position="109">
+              <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
               <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Catalog_Report.php">
+        <entry file="file://$PROJECT_DIR$/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="65" selection-end-column="17" />
+            <state relative-caret-position="109">
+              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
               <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Circulation_Report.php">
+        <entry file="file://$PROJECT_DIR$/Add_User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="96" column="24" selection-start-line="95" selection-start-column="28" selection-end-line="96" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Circulation_Print.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+            <state relative-caret-position="109">
+              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/generate_circulation.php">
+        <entry file="file://$PROJECT_DIR$/Update_Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_acquisition.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="146" selection-start-line="19" selection-start-column="146" selection-end-line="19" selection-end-column="146" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Acquisition_Print.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="67" column="89" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LibrarySearch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="109">
+              <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -158,9 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>author</find>
-      <find>toast</find>
-      <find>copyri</find>
       <find>date of she</find>
       <find>show</find>
       <find>Author</find>
@@ -179,7 +187,6 @@
       <find>progra</find>
       <find>progr</find>
       <find>Progra</find>
-      <find>Prog</find>
       <find>Us</find>
       <find>cours</find>
       <find>sort</find>
@@ -188,6 +195,10 @@
       <find>toa</find>
       <find>TOa</find>
       <find>returned</find>
+      <find>Prog</find>
+      <find>courses</find>
+      <find>'</find>
+      <find>COURSES</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,47 +207,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/nav.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/Home.php" />
-        <option value="$PROJECT_DIR$/Add_Course.php" />
-        <option value="$PROJECT_DIR$/Add_MaterialType.php" />
-        <option value="$PROJECT_DIR$/Add_Program.php" />
-        <option value="$PROJECT_DIR$/Add_Subject.php" />
-        <option value="$PROJECT_DIR$/Add_Subtype.php" />
-        <option value="$PROJECT_DIR$/Add_Supplier.php" />
-        <option value="$PROJECT_DIR$/Add_User.php" />
         <option value="$PROJECT_DIR$/AddCopies.php" />
         <option value="$PROJECT_DIR$/AddTitle.php" />
         <option value="$PROJECT_DIR$/AddTopics.php" />
-        <option value="$PROJECT_DIR$/Assets.php" />
         <option value="$PROJECT_DIR$/Catalog.php" />
         <option value="$PROJECT_DIR$/Checkin.php" />
         <option value="$PROJECT_DIR$/Checkout.php" />
-        <option value="$PROJECT_DIR$/Courses.php" />
         <option value="$PROJECT_DIR$/Edit_Title.php" />
         <option value="$PROJECT_DIR$/Fines.php" />
-        <option value="$PROJECT_DIR$/Inventory.php" />
         <option value="$PROJECT_DIR$/Inventory_Print.php" />
         <option value="$PROJECT_DIR$/ListOfCheckout.php" />
-        <option value="$PROJECT_DIR$/MaterialType.php" />
-        <option value="$PROJECT_DIR$/Program.php" />
         <option value="$PROJECT_DIR$/SearchTitle.php" />
         <option value="$PROJECT_DIR$/Statistics.php" />
-        <option value="$PROJECT_DIR$/Supplier.php" />
         <option value="$PROJECT_DIR$/TitleList.php" />
-        <option value="$PROJECT_DIR$/Update_Course.php" />
-        <option value="$PROJECT_DIR$/Update_MaterialType.php" />
-        <option value="$PROJECT_DIR$/Update_Program.php" />
-        <option value="$PROJECT_DIR$/Update_Subject.php" />
-        <option value="$PROJECT_DIR$/Update_Subtype.php" />
-        <option value="$PROJECT_DIR$/Update_Supplier.php" />
-        <option value="$PROJECT_DIR$/Update_Users.php" />
         <option value="$PROJECT_DIR$/UpdateCopies.php" />
         <option value="$PROJECT_DIR$/UserManagement.php" />
         <option value="$PROJECT_DIR$/UserManagement_Update.php" />
         <option value="$PROJECT_DIR$/UserManagementList.php" />
-        <option value="$PROJECT_DIR$/Users.php" />
         <option value="$PROJECT_DIR$/SearchDetails.php" />
         <option value="$PROJECT_DIR$/ListOfCopies.php" />
         <option value="$PROJECT_DIR$/LibrarySearch.php" />
@@ -247,6 +236,28 @@
         <option value="$PROJECT_DIR$/Circulation_Report.php" />
         <option value="$PROJECT_DIR$/Circulation_Print.php" />
         <option value="$PROJECT_DIR$/generate_circulation.php" />
+        <option value="$PROJECT_DIR$/Inventory.php" />
+        <option value="$PROJECT_DIR$/Assets.php" />
+        <option value="$PROJECT_DIR$/Update_Subject.php" />
+        <option value="$PROJECT_DIR$/Add_Subject.php" />
+        <option value="$PROJECT_DIR$/Supplier.php" />
+        <option value="$PROJECT_DIR$/Add_Supplier.php" />
+        <option value="$PROJECT_DIR$/Update_Supplier.php" />
+        <option value="$PROJECT_DIR$/MaterialType.php" />
+        <option value="$PROJECT_DIR$/Add_MaterialType.php" />
+        <option value="$PROJECT_DIR$/Update_MaterialType.php" />
+        <option value="$PROJECT_DIR$/Subtype.php" />
+        <option value="$PROJECT_DIR$/Update_Subtype.php" />
+        <option value="$PROJECT_DIR$/Add_Subtype.php" />
+        <option value="$PROJECT_DIR$/Program.php" />
+        <option value="$PROJECT_DIR$/Add_Program.php" />
+        <option value="$PROJECT_DIR$/Update_Program.php" />
+        <option value="$PROJECT_DIR$/Courses.php" />
+        <option value="$PROJECT_DIR$/Add_Course.php" />
+        <option value="$PROJECT_DIR$/Update_Course.php" />
+        <option value="$PROJECT_DIR$/Users.php" />
+        <option value="$PROJECT_DIR$/Add_User.php" />
+        <option value="$PROJECT_DIR$/Update_Users.php" />
       </list>
     </option>
   </component>
@@ -395,7 +406,7 @@
       <workItem from="1547467753768" duration="4209000" />
       <workItem from="1547512243469" duration="25150000" />
       <workItem from="1547557408068" duration="11326000" />
-      <workItem from="1547600447075" duration="19780000" />
+      <workItem from="1547600447075" duration="20787000" />
     </task>
     <servers />
   </component>
@@ -414,7 +425,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491446000" />
+    <option name="totallyTimeSpent" value="492453000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,80 +466,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MaterialType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile-app-login.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Program.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/program_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Receipt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register-mobile.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/return_book.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search-api.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTitle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="101" selection-start-line="25" selection-start-column="101" selection-end-line="25" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select-courses-api.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startup.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Statistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1547782177143" expanded="true" signature="8427:8477" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Student_LibrarySearch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51" />
@@ -549,17 +486,6 @@
         <state relative-caret-position="-395" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Supplier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TitleDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1224" />
@@ -575,84 +501,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Update_Course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" column="101" selection-start-line="39" selection-start-column="101" selection-end-line="39" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/update_fines.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Update_Program.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="101" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Update_MaterialType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="101" selection-start-line="33" selection-start-column="101" selection-end-line="33" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Update_Subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="101" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Update_Subtype.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="101" selection-start-line="33" selection-start-column="101" selection-end-line="33" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Update_Supplier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="101" selection-start-line="38" selection-start-column="101" selection-end-line="38" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/update_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Update_Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="101" selection-start-line="47" selection-start-column="101" selection-end-line="47" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UpdateCatalog.php">
@@ -714,17 +570,6 @@
           <caret line="37" column="101" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
           <folding>
             <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -802,10 +647,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generate_circulation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circulation_Print.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-253">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Circulation_Report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="96" column="24" selection-start-line="95" selection-start-column="28" selection-end-line="96" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="16" column="101" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="16" selection-end-column="101" />
           <folding>
             <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -814,17 +673,189 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Circulation_Print.php">
+    <entry file="file://$PROJECT_DIR$/Inventory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        <state relative-caret-position="272">
+          <caret line="16" column="101" selection-start-line="16" selection-start-column="101" selection-end-line="16" selection-end-column="101" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_circulation.php">
+    <entry file="file://$PROJECT_DIR$/Assets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
+        <state relative-caret-position="140">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="62" column="66" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_Subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_Supplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Supplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MaterialType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_MaterialType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_MaterialType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Subtype.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Subtype.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_Subtype.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_Program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Courses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_Course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add_User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Update_Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
         </state>
       </provider>
     </entry>

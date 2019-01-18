@@ -32,7 +32,7 @@ include "startup.php";
             <li><a href="MaterialType.php">Material Type</a></li>
             <li><a href="Subtype.php">Subtype</a></li>
             <li class="active"><a href="Program.php">Colleges</a></li>
-            <li><a href="Courses.php">Courses</a> </li>
+            <li><a href="Courses.php">Programs</a> </li>
             <li><a href="Users.php">Patrons</a></li>
         </ul>
     </nav>

@@ -13,7 +13,8 @@ include "startup.php";
     <link type="text/css" rel="stylesheet" href="CSS/Style1.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <title>NULRC</title>
 </head>
 <body>
@@ -69,7 +70,13 @@ include "startup.php";
             <?php
 
             $sql="";
+            $flag = false;
             if(isset($_POST["searchButton"])){
+                if(empty($_POST['txtStartDate']) || empty($_POST['txtEndDate'])) {
+                    echo "<script>swal('','Input dates are required', 'error')</script>";
+                } else {
+                    $flag = true;
+                }
                 $startDate= date_format(date_create($_POST['txtStartDate']),"Y-m-d");
                 $endDate=  date_format(date_create($_POST['txtEndDate']),"Y-m-d");
                 $sql="SELECT `acquisition`.`acquisition_number`,`catalog`.`catalog_id`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`is_borrowed`,`catalog`.`remarks`,`catalog`.`is_missing`,`catalog`.`other_details`,`catalog`.`barcode`,`inventory`.`date_of_inventory` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `inventory` WHERE `inventory`.`date_of_inventory` BETWEEN '$startDate' AND '$endDate' AND `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`catalog_id` = `inventory`.`catalog_id` ORDER BY `inventory`.`date_of_inventory` ASC ";
@@ -77,31 +84,30 @@ include "startup.php";
                 $sql="SELECT `acquisition`.`acquisition_number`,`catalog`.`catalog_id`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`is_borrowed`,`catalog`.`remarks`,`catalog`.`is_missing`,`catalog`.`other_details`,`catalog`.`barcode`,`inventory`.`date_of_inventory` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `inventory` WHERE `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`catalog_id` = `inventory`.`catalog_id` ORDER BY `inventory`.`date_of_inventory` ASC";
             }
 
-            if($stmt = $conn->query($sql)){
+            if($flag){
+            if($stmt = $conn->query($sql)) {
 
-                while ($row=$stmt->fetch_object()){
+                while ($row = $stmt->fetch_object()) {
                     $status;
-                    if($row->is_missing==1){
-                        $status="Missing";
-                    }
-                    elseif ($row->is_borrowed==1){
-                        $status="Borrowed";
-                    }
-                    elseif($row->remarks==null){
-                        $status ="Available";
-                    }
-                    else{
+                    if ($row->is_missing == 1) {
+                        $status = "Missing";
+                    } elseif ($row->is_borrowed == 1) {
+                        $status = "Borrowed";
+                    } elseif ($row->remarks == null) {
+                        $status = "Available";
+                    } else {
                         $status = $row->remarks;
                     }
                     echo "<tr>
-                        <td>".$row->title."</td>
-                        <td>".$row->author."</td>
-                        <td>".$row->barcode."</td>
-                        <td>".$row->other_details."</td>                       
+                        <td>" . $row->title . "</td>
+                        <td>" . $row->author . "</td>
+                        <td>" . $row->barcode . "</td>
+                        <td>" . $row->other_details . "</td>                       
                     </tr>";
 
 
                 }
+            }
             }
             else
             {
@@ -114,7 +120,7 @@ include "startup.php";
         </table>
         <div style="display: flex">
         <?php
-        if(isset($_POST["searchButton"])){
+        if(isset($_POST["searchButton"]) && $flag){
             echo "<form action='Inventory_Print.php' method='get' target='_blank' style='margin-right: 10px'>";
             $startDate = $_POST["txtStartDate"];
             $endDate = $_POST["txtEndDate"];

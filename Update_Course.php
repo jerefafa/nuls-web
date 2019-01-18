@@ -38,6 +38,7 @@ $result = mysqli_query($conn, $query);
         include "nav.php";
         ?>
         <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
 
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
@@ -47,7 +48,7 @@ $result = mysqli_query($conn, $query);
             <li><a href="MaterialType.php">Material Type</a></li>
             <li><a href="Subtype.php">Subtype</a></li>
             <li><a href="Program.php">Colleges</a></li>
-            <li class="active"><a href="Courses.php">Courses</a> </li>
+            <li class="active"><a href="Courses.php">Programs</a> </li>
             <li><a href="Users.php">Patrons</a></li>
         </ul>
     </nav>
