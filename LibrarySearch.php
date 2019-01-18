@@ -60,7 +60,7 @@ if(!isset($_GET["title"])){
                         <option value="1">Relevance</option>
                         <option value="2">Copyright Date</option>
                     </select>
-                    <input type="hidden" name="title" value="<?=$title?> ">
+                    <input type="hidden" name="title" value="<?=$title?>">
                 </th>
                 <th> <button class="btn" type="submit">Sort</button></th>
                 </form>
