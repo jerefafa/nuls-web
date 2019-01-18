@@ -31,6 +31,7 @@ include "startup.php";
         <?php
         include "nav.php";
         ?>
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
         <form action="LibrarySearch.php" method="get">
         <div class="valign-wrapper row">
 

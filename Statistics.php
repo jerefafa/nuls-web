@@ -14,7 +14,8 @@ include "startup.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <title>NULRC</title>
 </head>
 <body>
@@ -24,6 +25,7 @@ include "startup.php";
         <?php
         include "nav.php";
         ?>
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class=""><a href="Statistics.php">Circulation Statistics</a></li>
         </ul>
@@ -36,23 +38,23 @@ include "startup.php";
         <div class="row">
             <h6>Date:</h6>
             <div class="input-field col s3">
-                <input type="text" class="datepicker" id="from" name="from">
+                <input type="text" class="datepicker" id="from" name="from" required>
                 <label class="active center" for="to">From</label>
             </div>
             <div class="input-field col s3">
-                <input type="text" class="datepicker" id="to" name="to">
+                <input type="text" class="datepicker" id="to" name="to" required>
                 <label class="active center" for="from">To</label>
             </div>
             <div class="col s2">
                 <label>Circulation</label>
-                <select class="browser-default" name="cmbText">
+                <select class="browser-default" name="cmbText" required>
                     <option value="0">Check In</option>
                     <option value="1">Check Out</option>
                 </select>
             </div>
             <div class="col s2">
                 <label>College</label>
-                <select class="browser-default" name="cmbCourse">
+                <select class="browser-default" name="cmbCourse" required>
                     <option value="all" selected>All</option>
                     <?php
                     $stmt = $conn->query("SELECT * FROM `programs` WHERE `date_deleted` IS NULL");
@@ -70,60 +72,63 @@ include "startup.php";
         </form>
         <?php
             if (isset($_POST["goBtn"])){
-                $objects = array();
-                if($_POST["cmbCourse"] != "all") {
-                    $stmt1 = $conn->query("SELECT * FROM `courses` WHERE `program_id` = '".$_POST["cmbCourse"]."' ");
-                    while ($row1 = $stmt1->fetch_object()) {
-                        if ($_POST["cmbText"] == "0") {
-                            $from = date_format(date_create($_POST["from"]), "Y-m-d");
-                            $to = date_format(date_create($_POST["to"]), "Y-m-d");
-                            $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses`  WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`course_id` = '$row1->course_id' AND `circulation`.`date_returned` BETWEEN '$from' AND '$to'");
-                            $object = [
-                                "program_id" => $row1->course_id,
-                                "program" => $row1->course,
-                                "numCirculation" => mysqli_num_rows($stmt2)
-                            ];
-                            array_push($objects, $object);
-                        } else {
-                            $from = date_format(date_create($_POST["from"]), "Y-m-d");
-                            $to = date_format(date_create($_POST["to"]), "Y-m-d");
-                            $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses`  WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`course_id` = '$row1->course_id' AND `circulation`.`date_borrowed` BETWEEN '$from' AND '$to'");
-                            $object = [
-                                "program_id" => $row1->course_id,
-                                "program" => $row1->course,
-                                "numCirculation" => mysqli_num_rows($stmt2)
-                            ];
-                            array_push($objects, $object);
+                if(!empty($_POST["from"]) && !empty($_POST["to"])) {
+                    $objects = array();
+                    if ($_POST["cmbCourse"] != "all") {
+                        $stmt1 = $conn->query("SELECT * FROM `courses` WHERE `program_id` = '" . $_POST["cmbCourse"] . "' ");
+                        while ($row1 = $stmt1->fetch_object()) {
+                            if ($_POST["cmbText"] == "0") {
+                                $from = date_format(date_create($_POST["from"]), "Y-m-d");
+                                $to = date_format(date_create($_POST["to"]), "Y-m-d");
+                                $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses`  WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`course_id` = '$row1->course_id' AND `circulation`.`date_returned` BETWEEN '$from' AND '$to'");
+                                $object = [
+                                    "program_id" => $row1->course_id,
+                                    "program" => $row1->course,
+                                    "numCirculation" => mysqli_num_rows($stmt2)
+                                ];
+                                array_push($objects, $object);
+                            } else {
+                                $from = date_format(date_create($_POST["from"]), "Y-m-d");
+                                $to = date_format(date_create($_POST["to"]), "Y-m-d");
+                                $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses`  WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`course_id` = '$row1->course_id' AND `circulation`.`date_borrowed` BETWEEN '$from' AND '$to'");
+                                $object = [
+                                    "program_id" => $row1->course_id,
+                                    "program" => $row1->course,
+                                    "numCirculation" => mysqli_num_rows($stmt2)
+                                ];
+                                array_push($objects, $object);
+                            }
+                        }
+                    } else {
+                        $stmt1 = $conn->query("SELECT * FROM `programs` WHERE `date_deleted` IS NULL ");
+                        while ($row1 = $stmt1->fetch_object()) {
+                            if ($_POST["cmbText"] == "0") {
+                                $from = date_format(date_create($_POST["from"]), "Y-m-d");
+                                $to = date_format(date_create($_POST["to"]), "Y-m-d");
+                                $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses` INNER JOIN `programs` WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`program_id` = `programs`.`program_id` AND `programs`.`program_id` = '$row1->program_id' AND `circulation`.`date_returned` BETWEEN '$from' AND '$to'");
+                                $object = [
+                                    "program_id" => $row1->program_id,
+                                    "program" => $row1->program,
+                                    "numCirculation" => mysqli_num_rows($stmt2)
+                                ];
+                                array_push($objects, $object);
+                            } else {
+                                $from = date_format(date_create($_POST["from"]), "Y-m-d");
+                                $to = date_format(date_create($_POST["to"]), "Y-m-d");
+                                $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses` INNER JOIN `programs` WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`program_id` = `programs`.`program_id` AND `programs`.`program_id` = '$row1->program_id' AND `circulation`.`date_borrowed` BETWEEN '$from' AND '$to'");
+                                $object = [
+                                    "program_id" => $row1->program_id,
+                                    "program" => $row1->program,
+                                    "numCirculation" => mysqli_num_rows($stmt2)
+                                ];
+                                array_push($objects, $object);
+                            }
                         }
                     }
+                    echo " <canvas id=\"Chart1\"></canvas>";
+                } else{
+                    echo "<script>swal('','Please fill up all fields','error')</script>";
                 }
-                else {
-                    $stmt1 = $conn->query("SELECT * FROM `programs` WHERE `date_deleted` IS NULL ");
-                    while ($row1 = $stmt1->fetch_object()) {
-                        if ($_POST["cmbText"] == "0") {
-                            $from = date_format(date_create($_POST["from"]), "Y-m-d");
-                            $to = date_format(date_create($_POST["to"]), "Y-m-d");
-                            $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses` INNER JOIN `programs` WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`program_id` = `programs`.`program_id` AND `programs`.`program_id` = '$row1->program_id' AND `circulation`.`date_returned` BETWEEN '$from' AND '$to'");
-                            $object = [
-                                "program_id" => $row1->program_id,
-                                "program" => $row1->program,
-                                "numCirculation" => mysqli_num_rows($stmt2)
-                            ];
-                            array_push($objects, $object);
-                        } else {
-                            $from = date_format(date_create($_POST["from"]), "Y-m-d");
-                            $to = date_format(date_create($_POST["to"]), "Y-m-d");
-                            $stmt2 = $conn->query("SELECT `circulation`.`circulation_id` FROM `circulation` INNER JOIN `users` INNER JOIN `courses` INNER JOIN `programs` WHERE `circulation`.`borrower_id` = `users`.`user_id` AND `users`.`course_id` = `courses`.`course_id` AND `courses`.`program_id` = `programs`.`program_id` AND `programs`.`program_id` = '$row1->program_id' AND `circulation`.`date_borrowed` BETWEEN '$from' AND '$to'");
-                            $object = [
-                                "program_id" => $row1->program_id,
-                                "program" => $row1->program,
-                                "numCirculation" => mysqli_num_rows($stmt2)
-                            ];
-                            array_push($objects, $object);
-                        }
-                    }
-                }
-                echo " <canvas id=\"Chart1\"></canvas>";
             }
         ?>
 

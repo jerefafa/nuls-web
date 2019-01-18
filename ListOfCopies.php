@@ -42,6 +42,7 @@ error_reporting(0);
         <?php
         include "nav.php";
         ?>
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class=""><a href="AddCopies.php">Add Copies</a></li>
             <li class="active"><a href="ListOfCopies.php">List of Copies</a></li>
@@ -128,7 +129,7 @@ error_reporting(0);
                         <td>" . $row->edition . "</td>
                         <td style='display: flex'> 
                         <form action='UpdateCopies.php' method='get'><input class='btn-floating material-icons' type='submit' value='edit' style='border: 0px;color: #e4ffda;font-size: x-large;margin-right:25px'><input type='hidden' name='acquisition_number' value='" . $row->acquisition_number . "'></form>
-                        <form id='$row->acquisition_number' action='DeleteCopy.php' method='post'><button onclick='showPrompt(`".$row->title."`,`".$row->acquisition_number."`)' class='btn-floating material-icons' type='button'  style='border: 0px;color: white;font-size: x-large;' value='$row->id'>delete</button><input type='hidden' name='acquisition_number' value='" . $row->acquisition_number . "'></form>
+                    <!--  <form id='$row->acquisition_number' action='DeleteCopy.php' method='post'><button onclick='showPrompt(`".$row->title."`,`".$row->acquisition_number."`)' class='btn-floating material-icons' type='button'  style='border: 0px;color: white;font-size: x-large;' value='$row->id'>delete</button><input type='hidden' name='acquisition_number' value='" . $row->acquisition_number . "'></form> -->
                         </td>
                     </tr>";
                 }

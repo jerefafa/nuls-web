@@ -30,6 +30,7 @@ if(isset($_POST["username"])){
         $rows = mysqli_num_rows($stmt1);
         if($rows>0){
             while($res = $stmt1->fetch_object()) {
+                $_SESSION['fname'] = $res->fname;
                 $_SESSION['username'] = $res->email;
                 $_SESSION['position'] = $res->position;
                 if($res->position=="Chief Librarian" || $res->position=="Super Admin"){

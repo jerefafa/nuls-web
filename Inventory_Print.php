@@ -21,7 +21,6 @@
 <page size="A4">
     <div style="margin-left: 3%; margin-right: 3%; padding-top: 5%;">
         <h5>List of Books</h5>
-        <h6>Date: 05/06/2018 - 05/07/2018</h6><br>
         <table class="responsive-table">
             <thead>
             <tr>

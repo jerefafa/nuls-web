@@ -31,7 +31,7 @@ if(isset($_GET['material_type_id'])){
         <?php
         include "nav.php";
         ?>
-
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">

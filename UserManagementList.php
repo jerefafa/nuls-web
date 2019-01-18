@@ -41,6 +41,7 @@ include "startup.php";
         <?php
         include "nav.php";
         ?>
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only right-align"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">

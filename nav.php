@@ -1,6 +1,5 @@
 <div id="menu">
     <ul id="slide-out" class="side-nav fixed sidebar-background">
-
         <li class="sidebar-header user-view">
             <img class="circle center-block" src="Images/NULOGO.png">
             <p class="center">National University <br> Learning Resource Center</p>

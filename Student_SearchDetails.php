@@ -4,7 +4,11 @@ require "connection.php";
         header("location:index.php");
     }
     $acquisition_num = $_GET["acquisition_num"];
-
+    $bookObject = null;
+    $stmt = $conn->query("SELECT * FROM `acquisition` WHERE `acquisition_number` = '".$acquisition_num."'");
+    while ($row = $stmt->fetch_object()) {
+        $bookObject = $row;
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,13 +47,16 @@ require "connection.php";
     </nav>
 
     <div id="content">
-
+        <h4><?= $bookObject->title ?></h4>
+        <h6>Author: <?= $bookObject->author ?></h6>
+        <h6>Edition: <?= $bookObject->edition     ?></h6>
         <h6>Copies at National University Learning Resource Center</h6>
         <table class="highlight grey lighten-2">
             <thead>
             <tr>
                 <th>Call #</th>
-                <th>Barcode</th>
+                <th>Copyright Year</th>
+                <th>Material Type</th>
                 <th>Status</th>
                 <th>Description</th>
             </tr>
@@ -57,11 +64,12 @@ require "connection.php";
 
             <tbody>
             <?php
-            $stmt = $conn->query("SELECT * FROM `catalog` WHERE `acquisition_number` = '".$acquisition_num."'");
+            $stmt = $conn->query("SELECT * FROM `catalog` INNER JOIN `material_types` WHERE `catalog`.`material_type_id` = `material_types`.`material_type_id` AND `catalog`.`acquisition_number` = '".$acquisition_num."'");
             while ($row = $stmt->fetch_object()){
                 $availability = mysqli_num_rows($conn->query("SELECT * FROM `circulation` WHERE `barcode` = '".$row->barcode."' AND `date_returned` IS NULL")) ==0 ?"Available":"Not Available";
                 echo "<tr><td>$row->call_number</td>
-                        <td>$row->barcode</td>
+                        <td>".date_format(date_create($bookObject->copyright_date),"Y")."</td>
+                        <td>$row->material_type</td>
                         <td>$availability</td>
                         <td>$row->other_details</td>
                         </tr>

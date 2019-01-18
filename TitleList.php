@@ -23,6 +23,8 @@ include "startup.php";
         <?php
         include "nav.php";
         ?>
+        <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
+
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="Catalog.php">Library Search</a></li>
             <li class=""><a href="SearchTitle.php">Add Title</a></li>

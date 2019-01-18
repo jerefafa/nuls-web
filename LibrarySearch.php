@@ -26,6 +26,7 @@ if(!isset($_GET["title"])){
         <?php
         include "nav.php";
         ?>
+
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="Catalog.php">Library Search</a></li>
 
