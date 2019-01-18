@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/LibrarySearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListOfCopies.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListOfCopies.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="127" column="54" lean-forward="true" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
+            <state relative-caret-position="85">
+              <caret line="105" column="102" selection-start-line="105" selection-start-column="102" selection-end-line="105" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -125,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LibrarySearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="544">
               <caret line="62" column="72" lean-forward="true" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
             </state>
           </provider>
@@ -233,9 +233,9 @@
         <option value="$PROJECT_DIR$/UserManagement_Update.php" />
         <option value="$PROJECT_DIR$/UserManagementList.php" />
         <option value="$PROJECT_DIR$/Users.php" />
-        <option value="$PROJECT_DIR$/ListOfCopies.php" />
         <option value="$PROJECT_DIR$/SearchDetails.php" />
         <option value="$PROJECT_DIR$/LibrarySearch.php" />
+        <option value="$PROJECT_DIR$/ListOfCopies.php" />
       </list>
     </option>
   </component>
@@ -384,7 +384,7 @@
       <workItem from="1547467753768" duration="4209000" />
       <workItem from="1547512243469" duration="25150000" />
       <workItem from="1547557408068" duration="11326000" />
-      <workItem from="1547600447075" duration="16521000" />
+      <workItem from="1547600447075" duration="17227000" />
     </task>
     <servers />
   </component>
@@ -403,7 +403,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="488187000" />
+    <option name="totallyTimeSpent" value="488893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -777,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="127" column="54" lean-forward="true" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -796,8 +789,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LibrarySearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="544">
           <caret line="62" column="72" lean-forward="true" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="105" column="102" selection-start-line="105" selection-start-column="102" selection-end-line="105" selection-end-column="102" />
         </state>
       </provider>
     </entry>

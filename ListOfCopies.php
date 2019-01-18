@@ -93,34 +93,18 @@ error_reporting(0);
                     $sql = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
                 }
                 if ($stmt = $conn->query($sql)) {
-                $ctr = mysqli_num_rows($stmt);
-                $page = $ctr / 10;
-                $page = ceil($page);
-                if (!isset($_GET["searchButton"])) {
-                for ($b = 1;
-                $b <= $page;
-                $b++) {
-                ?> <a href="ListOfCopies.php?page=<?php echo $b; ?>"><?php echo $b . ' ' ?></a>  <?php
-            }
-            }
-                $a = 1;
-                if (isset($_GET["page"])) {
-                    $a = $_GET["page"];
-                };
-                if ($a == "" || $a == "1") {
-                    $page1 = 0;
-                } else {
-                    $page1 = ($a * 10) - 10;
-                }
+
+
                 if (!isset($_GET["search"])) {
-                    $sql2 = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title` LIMIT $page1, 10";
+                    $sql2 = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
                 } else {
                     $sql2 = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE (`acquisition`.`title`='$keyword' OR `programs`.`program`='$keyword' OR `subjects`.`subject_name`='$keyword' OR `acquisition`.`author` = '$keyword') AND `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
 
                 }
                 $stmt2 = $conn->query($sql2);
                 while ($row = $stmt2->fetch_object()) {
-                    echo "<tr>
+                    if(mysqli_num_rows($conn->query("SELECT * FROM `catalog` WHERE `acquisition_number` = '$row->acquisition_number' AND `date_deleted` IS NULL")) == 0) {
+                        echo "<tr>
                         <td>" . $row->program . "</td>
                         <td>" . $row->subject_name . "</td>
                         <td>" . $row->author . "</td>
@@ -128,9 +112,10 @@ error_reporting(0);
                         <td>" . $row->edition . "</td>
                         <td style='display: flex'> 
                         <form action='UpdateCopies.php' method='get'><input class='btn-floating material-icons' type='submit' value='edit' style='border: 0px;color: #e4ffda;font-size: x-large;margin-right:25px'><input type='hidden' name='acquisition_number' value='" . $row->acquisition_number . "'></form>
-                        <!--<form id='$row->acquisition_number' action='DeleteCopy.php' method='post'><button onclick='showPrompt(`".$row->title."`,`".$row->acquisition_number."`)' class='btn-floating material-icons' type='button'  style='border: 0px;color: white;font-size: x-large;' value='$row->id'>delete</button><input type='hidden' name='acquisition_number' value='" . $row->acquisition_number . "'></form> -->
+                        <!--<form id='$row->acquisition_number' action='DeleteCopy.php' method='post'><button onclick='showPrompt(`" . $row->title . "`,`" . $row->acquisition_number . "`)' class='btn-floating material-icons' type='button'  style='border: 0px;color: white;font-size: x-large;' value='$row->id'>delete</button><input type='hidden' name='acquisition_number' value='" . $row->acquisition_number . "'></form> -->
                         </td>
                     </tr>";
+                    }
                 }
             } else {
                 echo mysqli_error($conn);
