@@ -13,7 +13,8 @@ include "startup.php";
     <link type="text/css" rel="stylesheet" href="CSS/Style1.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <title>NULRC</title>
 </head>
 <body>
@@ -63,14 +64,19 @@ include "startup.php";
             <th>Date Delivered</th>
             <th>Date Processed</th>
             <th>Date of Shelving</th>
-            <th>Remarks</th>
             <th>Quantity</th>
             </thead>
             <tbody>
             <?php
             $sql="";
-
+            $flag = false;
             if(isset($_POST["searchButton"])){
+                if(empty($_POST['txtStartDate']) || empty($_POST['txtEndDate'])) {
+                    echo "<script>swal('','Input dates are required', 'error')</script>";
+                } else {
+                    $flag = true;
+                }
+
                 $startDate= date_format(date_create($_POST['txtStartDate']),"Y-m-d");
                 $endDate=  date_format(date_create($_POST['txtEndDate']),"Y-m-d");
                 $sql="SELECT * FROM `acquisition` WHERE `date_delivered` BETWEEN '$startDate' AND '$endDate' AND `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
@@ -78,7 +84,7 @@ include "startup.php";
                 $sql="SELECT * FROM `acquisition` WHERE `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
             }
 
-            if($stmt = $conn->query($sql)){
+            if($stmt = $conn->query($sql) && $flag){
 
                 while ($row=$stmt->fetch_object()){
                     echo "<tr>
@@ -90,7 +96,6 @@ include "startup.php";
                     <td>".date_format(date_create($row->date_delivered),"M d Y")."</td>
                     <td>".date_format(date_create($row->date_processed),"M d Y")."</td>
                     <td>".date_format(date_create($row->date_of_shelving),"M d Y")."</td>
-                    <td>".$row->remarks."</td>
                     <td>".$row->quantity."</td>
                     </tr>";
                 }
@@ -105,7 +110,7 @@ include "startup.php";
         </table>
         <div style="display: flex">
         <?php
-        if(isset($_POST["searchButton"])) {
+        if(isset($_POST["searchButton"]) && $flag) {
             echo "<form action='Acquisition_Print.php' method='get' target='_blank' style='margin-right: 5px'>";
             $startDate = $_POST["txtStartDate"];
             $endDate = $_POST["txtEndDate"];

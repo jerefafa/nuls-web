@@ -42,7 +42,6 @@ error_reporting(0);
             <th>Price</th>
             <th>Date Delivered</th>
             <th>Date of Shelving</th>
-            <th>Remarks</th>
             <th>Quantity</th>
             </thead>
             <tbody>
@@ -67,7 +66,6 @@ error_reporting(0);
                     <td>".$row->price."</td>
                     <td>".date_format(date_create($row->date_delivered),"M d Y")."</td>
                     <td>".date_format(date_create($row->date_of_shelving),"M d Y")."</td>
-                    <td>".$row->remarks."</td>
                     <td>".$row->quantity."</td>
                     </tr>";
                 }
