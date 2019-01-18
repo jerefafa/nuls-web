@@ -8,10 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acquisition_Print.php" beforeDir="false" afterPath="$PROJECT_DIR$/Acquisition_Print.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acquisition_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Acquisition_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_acquisition.php" beforeDir="false" afterPath="$PROJECT_DIR$/generate_acquisition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Catalog_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog_Report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circulation_Print.php" beforeDir="false" afterPath="$PROJECT_DIR$/Circulation_Print.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circulation_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Circulation_Report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_circulation.php" beforeDir="false" afterPath="$PROJECT_DIR$/generate_circulation.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,25 +37,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserManagement_Add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserManagement_Update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="37" column="101" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserManagementList.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -63,19 +44,6 @@
               <folding>
                 <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,16 +58,62 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Acquisition_Report.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="101" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Catalog_Report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="65" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Circulation_Report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="96" column="24" selection-start-line="95" selection-start-column="28" selection-end-line="96" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Circulation_Print.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generate_circulation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -118,18 +132,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="67" column="89" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchDetails.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="125" column="26" lean-forward="true" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -156,9 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>from</find>
-      <find>s</find>
-      <find>patter</find>
       <find>author</find>
       <find>toast</find>
       <find>copyri</find>
@@ -186,6 +185,9 @@
       <find>sort</find>
       <find>nav</find>
       <find>releca`</find>
+      <find>toa</find>
+      <find>TOa</find>
+      <find>returned</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,8 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/register-mobile.php" />
-        <option value="$PROJECT_DIR$/Student_SearchDetails.php" />
         <option value="$PROJECT_DIR$/nav.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/Home.php" />
@@ -211,10 +211,8 @@
         <option value="$PROJECT_DIR$/AddTopics.php" />
         <option value="$PROJECT_DIR$/Assets.php" />
         <option value="$PROJECT_DIR$/Catalog.php" />
-        <option value="$PROJECT_DIR$/Catalog_Report.php" />
         <option value="$PROJECT_DIR$/Checkin.php" />
         <option value="$PROJECT_DIR$/Checkout.php" />
-        <option value="$PROJECT_DIR$/Circulation_Report.php" />
         <option value="$PROJECT_DIR$/Courses.php" />
         <option value="$PROJECT_DIR$/Edit_Title.php" />
         <option value="$PROJECT_DIR$/Fines.php" />
@@ -245,6 +243,10 @@
         <option value="$PROJECT_DIR$/Acquisition_Print.php" />
         <option value="$PROJECT_DIR$/generate_acquisition.php" />
         <option value="$PROJECT_DIR$/Acquisition_Report.php" />
+        <option value="$PROJECT_DIR$/Catalog_Report.php" />
+        <option value="$PROJECT_DIR$/Circulation_Report.php" />
+        <option value="$PROJECT_DIR$/Circulation_Print.php" />
+        <option value="$PROJECT_DIR$/generate_circulation.php" />
       </list>
     </option>
   </component>
@@ -393,7 +395,7 @@
       <workItem from="1547467753768" duration="4209000" />
       <workItem from="1547512243469" duration="25150000" />
       <workItem from="1547557408068" duration="11326000" />
-      <workItem from="1547600447075" duration="18420000" />
+      <workItem from="1547600447075" duration="19780000" />
     </task>
     <servers />
   </component>
@@ -412,7 +414,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490086000" />
+    <option name="totallyTimeSpent" value="491446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -427,7 +429,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49586776" visible="true" weight="0.24765101" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49586776" visible="true" weight="0.24765101" />
       <window_info id="Structure" order="1" weight="0.24918918" />
       <window_info id="Favorites" order="2" sideWeight="0.5041322" side_tool="true" weight="0.16864865" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -439,7 +441,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293979" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5073826" side_tool="true" weight="0.3654391" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49261746" visible="true" weight="0.42351276" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49261746" visible="true" weight="0.42351276" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -453,33 +455,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Inventory_Print.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-477">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/librarian_lender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ListOfCheckout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="101" selection-start-line="30" selection-start-column="101" selection-end-line="30" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/material_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MaterialType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -805,13 +780,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Acquisition_Report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+        <state relative-caret-position="255">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="101" />
           <folding>
             <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Catalog_Report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circulation_Report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="96" column="24" selection-start-line="95" selection-start-column="28" selection-end-line="96" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Circulation_Print.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_circulation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
         </state>
       </provider>
     </entry>

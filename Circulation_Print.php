@@ -35,7 +35,7 @@
 
                 if($cmbValue == 0){
                     $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`barcode`,`users`.`user_id`,`users`.`user_fname`,`users`.`user_lname`,`users`.`user_mname`,`users`.`id_number`,`courses`.`course_id`,`courses`.`course`,`circulation`.`date_borrowed`,`circulation`.`date_returned` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `circulation` INNER JOIN `users` INNER JOIN `courses` WHERE `circulation`.`date_returned` BETWEEN '$startDate' AND '$endDate' AND `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`barcode` = `circulation`.`barcode` AND `users`.`user_id` = `circulation`.`borrower_id` AND `courses`.`course_id` = `users`.`course_id`";
-                }else if ($cmbValue == 1){
+                  }else if ($cmbValue == 1){
                     $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`barcode`,`users`.`user_id`,`users`.`user_fname`,`users`.`user_lname`,`users`.`user_mname`,`users`.`id_number`,`courses`.`course_id`,`courses`.`course`,`circulation`.`date_borrowed`,`circulation`.`date_returned` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `circulation` INNER JOIN `users` INNER JOIN `courses` WHERE `circulation`.`date_borrowed` BETWEEN '$startDate' AND '$endDate' AND `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`barcode` = `circulation`.`barcode` AND `users`.`user_id` = `circulation`.`borrower_id` AND `courses`.`course_id` = `users`.`course_id`";
                 }
             }
@@ -46,15 +46,16 @@
             if($stmt = $conn->query($sql)){
 
                 while ($row=$stmt->fetch_object()){
+                    if($cmbValue == 0){
+                        $str = "<i>Checked in " . $row->date_borrowed  . "</i> from <b>" . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . ": " . $row->id_number . ")<br>";
+                    }else if ($cmbValue == 1){
+                        $str = "<i>Checked out " . $row->date_borrowed  . "</i> to <b>" . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . ": " . $row->id_number . ")<br>";
+                    }
                     echo"
                     <tr>
                         <td>
                             <b>".$row->title." </b> ".$row->barcode."<br>
-                            <i>Checked out ".$row->date_borrowed."</i> to <b>".$row->user_lname.", ".$row->user_fname." ".$row->user_mname."</b> (".$row->course.": ".$row->id_number.")<br>
-        
-                        </td>
-                        <td>
-                            <b>Returned</b> ".$row->date_returned."
+                            $str
                         </td>
                         
                     </tr>

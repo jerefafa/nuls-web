@@ -13,7 +13,8 @@ include "startup.php";
     <link type="text/css" rel="stylesheet" href="CSS/Style1.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <title>NULRC</title>
 </head>
 <body>
@@ -65,8 +66,14 @@ include "startup.php";
             <tbody>
             <?php
             $sql="";
+            $flag = false;
             if(isset($_POST["searchButton"])){
                 $cmbValue = $_POST["cmbText"];
+                if(empty($_POST['txtStartDate']) || empty($_POST['txtEndDate'])) {
+                    echo "<script>swal('','Input dates are required', 'error')</script>";
+                } else {
+                    $flag = true;
+                }
                 $startDate= date_format(date_create($_POST['txtStartDate']),"Y-m-d");
                 $endDate=  date_format(date_create($_POST['txtEndDate']),"Y-m-d");
 
@@ -79,23 +86,25 @@ include "startup.php";
             else{
                 $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`barcode`,`users`.`user_id`,`users`.`user_fname`,`users`.`user_lname`,`users`.`user_mname`,`users`.`id_number`,`courses`.`course_id`,`courses`.`course`,`circulation`.`date_borrowed`,`circulation`.`date_returned` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `circulation` INNER JOIN `users` INNER JOIN `courses` WHERE `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`barcode` = `circulation`.`barcode` AND `users`.`user_id` = `circulation`.`borrower_id` AND `courses`.`course_id` = `users`.`course_id`";
             }
+            if($flag) {
+                if ($stmt = $conn->query($sql)) {
 
-            if($stmt = $conn->query($sql)){
-
-                while ($row=$stmt->fetch_object()){
-                    echo"
+                    while ($row = $stmt->fetch_object()) {
+                        if($cmbValue == 0) {
+                            $str = "<i>Checked in " . $row->date_borrowed  . "</i> from <b>" . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . ": " . $row->id_number . ")<br>";
+                        } else {
+                            $str = "<i>Checked out " . $row->date_borrowed  . "</i> to <b>" . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . ": " . $row->id_number . ")<br>";
+                        }
+                        echo "
                     <tr>
                         <td>
-                            <b>".$row->title." </b> ".$row->barcode."<br>
-                            <i>Checked out ".$row->date_borrowed."</i> to <b>".$row->user_lname.", ".$row->user_fname." ".$row->user_mname."</b> (".$row->course.": ".$row->id_number.")<br>
-        
-                        </td>
-                        <td>
-                            <b>Returned</b> ".$row->date_returned."
+                            <b>" . $row->title . " </b> " . $row->barcode . "<br>
+                            $str
                         </td>
                         
                     </tr>
                     ";
+                    }
                 }
             }
             else
@@ -110,7 +119,7 @@ include "startup.php";
         </table>
         <div style="display: flex">
         <?php
-        if(isset($_POST["searchButton"])){
+        if(isset($_POST["searchButton"]) && $flag){
             echo "<form action='Circulation_Print.php' method='get' target='_blank' style='margin-right: 10px'>";
             $startDate = $_POST["txtStartDate"];
             $endDate = $_POST["txtEndDate"];

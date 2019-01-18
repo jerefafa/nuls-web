@@ -13,7 +13,8 @@ include "startup.php";
     <link type="text/css" rel="stylesheet" href="CSS/Style1.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <title>NULRC</title>
 </head>
 <body>
@@ -44,7 +45,7 @@ include "startup.php";
                 </div>
                 <div class="input-field col s3">
                     <input type="text" class="datepicker" id="from" name="txtEndDate">
-                    <label class="active center" for="from">Toa</label>
+                    <label class="active center" for="from">To</label>
                 </div>
                 <div class="col s3">
                     <button type="submit" class="waves-effect waves-light btn active" style="margin-top: 11%" type="submit" value="search" name="searchButton">Search</button>
@@ -55,18 +56,24 @@ include "startup.php";
         <table class="highlight grey lighten-2">
             <tbody>
             <?php
+            $flag = false;
             $sql="";
             if(isset($_POST["searchButton"])){
+                if(empty($_POST['txtStartDate']) || empty($_POST['txtEndDate'])) {
+                    echo "<script>swal('','Input dates are required', 'error')</script>";
+                } else {
+                    $flag = true;
+                }
                 $startDate= date_format(date_create($_POST['txtStartDate']),"Y-m-d");
                 $endDate=  date_format(date_create($_POST['txtEndDate']),"Y-m-d");
-                $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`catalog`.`call_number`,`catalog`.`publisher`,`catalog`.`publication_date`, `catalog`.`barcode` FROM `acquisition` INNER JOIN `catalog` WHERE `catalog`.`publication_date` BETWEEN '$startDate' AND '$endDate' AND `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` ORDER BY `catalog`.`publication_date` ASC ";
+                $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`catalog`.`call_number`,`catalog`.`publisher`,`catalog`.`publication_date`, `catalog`.`barcode` FROM `acquisition` INNER JOIN `catalog` WHERE `catalog`.`publication_date` BETWEEN '$startDate' AND '$endDate' AND `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` ORDER BY `catalog`.`barcode` ASC ";
             }else{
-                $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`catalog`.`call_number`,`catalog`.`publisher`,`catalog`.`publication_date`, `catalog`.`barcode` FROM `acquisition` INNER JOIN `catalog` WHERE `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` ORDER BY `catalog`.`publication_date` ASC";
+                $sql="SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`catalog`.`call_number`,`catalog`.`publisher`,`catalog`.`publication_date`, `catalog`.`barcode` FROM `acquisition` INNER JOIN `catalog` WHERE `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` ORDER BY `catalog`.`barcode` ASC";
             }
-
-            if($stmt=$conn->query($sql)){
-                while ($row=$stmt->fetch_object()){
-                    echo "
+            if($flag) {
+                if ($stmt = $conn->query($sql)) {
+                    while ($row = $stmt->fetch_object()) {
+                        echo "
                     <tr>
                         <td>
                             <b>$row->title</b> <br>
@@ -76,6 +83,7 @@ include "startup.php";
                         </td>
                     </tr>
                     ";
+                    }
                 }
             }
 
@@ -85,7 +93,7 @@ include "startup.php";
         </table>
         <div style="display: flex">
         <?php
-        if(isset($_POST["searchButton"])){
+        if(isset($_POST["searchButton"]) && $flag){
             echo "<form action='Catalog_Print.php' method='get' target='_blank' style='margin-right: 10px'>";
             $startDate = $_POST["txtStartDate"];
             $endDate = $_POST["txtEndDate"];
