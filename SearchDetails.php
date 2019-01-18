@@ -120,10 +120,10 @@ if(!isset($_GET["acquisition_number"])){
             <input type="hidden" name="acquisition_number" value="<?php echo $_GET["acquisition_number"]?>">
             <input class="btn" value="ADD COPY" type="submit" name="addCopy">
             </form>
-            <form action="AddTopics.php">
-                <input type="hidden" name="acquisition_number" value="<?php echo $_GET["acquisition_number"]?>">
-            <input class="btn" value="ADD TOPICS" type="submit" style="margin-left: 5px;">
-            </form>
+<!--            <form action="AddTopics.php">-->
+<!--                <input type="hidden" name="acquisition_number" value="--><?php //echo $_GET["acquisition_number"]?><!--">-->
+<!--            <input class="btn" value="ADD TOPICS" type="submit" style="margin-left: 5px;">-->
+<!--            </form>-->
         </div>
     </div>
 

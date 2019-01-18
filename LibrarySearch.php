@@ -39,19 +39,31 @@ if(!isset($_GET["title"])){
 
         <h6><b>Search for (library). Searched in: National University Learning Resource Center</b></h6>
         <?php
-        $stmt = $conn->query("SELECT `acquisition_number`,`title`,`author`,`edition`,`copyright_date` FROM `acquisition` WHERE `title` LIKE '%".$_GET["title"]."%' OR `author` LIKE '%".$_GET["title"]."%'");
-
+        $sql = "";
+        $title = $_GET["title"];
+        if(isset($_GET["srt"]) && $_GET["srt"] == "2") {
+            $sql = "SELECT `acquisition_number`,`title`,`author`,`edition`,`copyright_date` FROM `acquisition` WHERE `title` LIKE '%".$_GET["title"]."%' OR `author` LIKE '%".$_GET["title"]."%' ORDER BY `copyright_date`";
+        }
+        else {
+            $sql = "SELECT `acquisition_number`,`title`,`author`,`edition`,`copyright_date` FROM `acquisition` WHERE `title` LIKE '%".$_GET["title"]."%' OR `author` LIKE '%".$_GET["title"]."%'";
+        }
+        $stmt = $conn->query($sql);
         ?>
         <table class="highlight grey lighten-2">
             <thead>
             <tr>
+                <form action="LibrarySearch.php" method="get">
                 <th>Titles: <?php echo mysqli_num_rows($stmt)?></th>
                 <th>
-                    <select class="browser-default">
+                    <select class="browser-default" name="srt" required>
                         <option value="" disabled selected>Sort by:</option>
                         <option value="1">Relevance</option>
+                        <option value="2">Copyright Date</option>
                     </select>
+                    <input type="hidden" name="title" value="<?=$title?> ">
                 </th>
+                <th> <button class="btn" type="submit">Sort</button></th>
+                </form>
             </tr>
             </thead>
 

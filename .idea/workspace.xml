@@ -9,54 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddCopies.php" beforeDir="false" afterPath="$PROJECT_DIR$/AddCopies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddTitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/AddTitle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddTopics.php" beforeDir="false" afterPath="$PROJECT_DIR$/AddTopics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_MaterialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_MaterialType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Program.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Subject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_Subtype.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Subtype.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Supplier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets.php" beforeDir="false" afterPath="$PROJECT_DIR$/Assets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Catalog_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Checkin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Checkin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circulation_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Circulation_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/Courses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Edit_Title.php" beforeDir="false" afterPath="$PROJECT_DIR$/Edit_Title.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fines.php" beforeDir="false" afterPath="$PROJECT_DIR$/Fines.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory_Print.php" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory_Print.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrarySearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListOfCheckout.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListOfCheckout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ListOfCopies.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListOfCopies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaterialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/MaterialType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/Program.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SearchDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/SearchDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SearchTitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/SearchTitle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student_SearchDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/Student_SearchDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Supplier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitleList.php" beforeDir="false" afterPath="$PROJECT_DIR$/TitleList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UpdateCopies.php" beforeDir="false" afterPath="$PROJECT_DIR$/UpdateCopies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_MaterialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_MaterialType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Program.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Subject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_Subtype.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Subtype.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Supplier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update_Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/Update_Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagementList.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagementList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement_Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement_Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,18 +36,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-borrow-search.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-919" />
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_delete.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -151,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Users.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -165,9 +108,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UpdateCopiesCommand.php">
+        <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-885" />
+            <state relative-caret-position="192">
+              <caret line="127" column="54" lean-forward="true" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchDetails.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="125" column="26" lean-forward="true" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LibrarySearch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -184,7 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delete</find>
       <find>from</find>
       <find>s</find>
       <find>patter</find>
@@ -214,6 +179,7 @@
       <find>cours</find>
       <find>sort</find>
       <find>nav</find>
+      <find>releca`</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,12 +217,9 @@
         <option value="$PROJECT_DIR$/Fines.php" />
         <option value="$PROJECT_DIR$/Inventory.php" />
         <option value="$PROJECT_DIR$/Inventory_Print.php" />
-        <option value="$PROJECT_DIR$/LibrarySearch.php" />
         <option value="$PROJECT_DIR$/ListOfCheckout.php" />
-        <option value="$PROJECT_DIR$/ListOfCopies.php" />
         <option value="$PROJECT_DIR$/MaterialType.php" />
         <option value="$PROJECT_DIR$/Program.php" />
-        <option value="$PROJECT_DIR$/SearchDetails.php" />
         <option value="$PROJECT_DIR$/SearchTitle.php" />
         <option value="$PROJECT_DIR$/Statistics.php" />
         <option value="$PROJECT_DIR$/Supplier.php" />
@@ -273,6 +236,9 @@
         <option value="$PROJECT_DIR$/UserManagement_Update.php" />
         <option value="$PROJECT_DIR$/UserManagementList.php" />
         <option value="$PROJECT_DIR$/Users.php" />
+        <option value="$PROJECT_DIR$/ListOfCopies.php" />
+        <option value="$PROJECT_DIR$/SearchDetails.php" />
+        <option value="$PROJECT_DIR$/LibrarySearch.php" />
       </list>
     </option>
   </component>
@@ -421,7 +387,7 @@
       <workItem from="1547467753768" duration="4209000" />
       <workItem from="1547512243469" duration="25150000" />
       <workItem from="1547557408068" duration="11326000" />
-      <workItem from="1547600447075" duration="11067000" />
+      <workItem from="1547600447075" duration="16442000" />
     </task>
     <servers />
   </component>
@@ -440,7 +406,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482733000" />
+    <option name="totallyTimeSpent" value="488108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,7 +421,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49586776" visible="true" weight="0.24765101" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49586776" visible="true" weight="0.24765101" />
       <window_info id="Structure" order="1" weight="0.24918918" />
       <window_info id="Favorites" order="2" sideWeight="0.5041322" side_tool="true" weight="0.16864865" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -467,7 +433,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293979" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5073826" side_tool="true" weight="0.3654391" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49261746" visible="true" weight="0.33569404" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49261746" visible="true" weight="0.42351276" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -514,27 +480,10 @@
         <state relative-caret-position="-256" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LibrarySearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ListOfCheckout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="30" column="101" selection-start-line="30" selection-start-column="101" selection-end-line="30" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="44" column="101" selection-start-line="44" selection-start-column="101" selection-end-line="44" selection-end-column="101" />
           <folding>
             <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -592,16 +541,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search-api.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchDetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="47" column="101" selection-start-line="47" selection-start-column="101" selection-end-line="47" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SearchTitle.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -838,6 +777,30 @@
             <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="127" column="54" lean-forward="true" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="125" column="26" lean-forward="true" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LibrarySearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
         </state>
       </provider>
     </entry>
