@@ -74,7 +74,8 @@ error_reporting(0);
             <?php
             while ($row = $stmt->fetch_object()) {
                 $numAvailable = mysqli_num_rows($conn->query("SELECT * FROM `catalog` WHERE `acquisition_number` = '" . $row->acquisition_number . "'")) - mysqli_num_rows($conn->query("SELECT * FROM `circulation` INNER JOIN `acquisition` INNER JOIN `catalog` WHERE `circulation`.`barcode` = `catalog`.`barcode` AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND `acquisition`.`acquisition_number` = '" . $row->acquisition_number . "' AND `circulation`.`date_returned` IS NULL"));
-                echo "<tr>
+                if ($numAvailable > 0) {
+                    echo "<tr>
                         <td>
                        <a href='Student_SearchDetails.php?acquisition_num=$row->acquisition_number'><b>$row->title</b></a><br>
                        Author: $row->author<br>
@@ -83,6 +84,7 @@ error_reporting(0);
                          <td> $numAvailable of $row->quantity Available</td>
                          <td></td>
                         </tr>";
+                }
             }
             }
             ?>
