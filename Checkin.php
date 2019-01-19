@@ -29,6 +29,8 @@ include "startup.php";
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="Checkout.php">Check out</a></li>
             <li class="active"><a href="Checkin.php">Check in</a></li>
+            <li><a href="Lend.php">Lend</a></li>
+            <li><a href="Receive.php">Receive</a></li>
         </ul>
     </nav>
 

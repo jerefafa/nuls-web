@@ -27,9 +27,9 @@ include "startup.php";
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="Checkout.php">Check out</a></li>
+            <li><a href="Checkout.php">Check out</a></li>
             <li><a href="Checkin.php">Check in</a></li>
-            <li><a href="Lend.php">Lend</a></li>
+            <li class="active"><a href="Lend.php">Lend</a></li>
             <li><a href="Receive.php">Receive</a></li>
         </ul>
     </nav>
@@ -38,39 +38,29 @@ include "startup.php";
         <?php
         include "nav.php";
         ?>
-        <form action="ListOfCheckout.php" method="get">
-        <div class="row">
-            <div class="col s12 m4 l3"></div>
-
-            <div class="col s12 m8 l9">
-
-                <div class="row">
-                    <div class="col s12">
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">search</i>
-                            <input id="icon_prefix" type="text" class="validate" name="find">
-                            <label for="icon_prefix">Find</label>
-                        </div>
-
-                        <div class="col s6" style="margin-top: 10px">
-                            <input type="submit" class="waves-effect waves-light btn" style="margin-top: 1%" value="GO!" name="go">
-                        </div>
-                    </div>
-                    <div class="col s12">
-                        <div class="col s4" style="margin-left: 100px">
-                            <select class="browser-default" name="findwhat">
-                                <option value="1">Patron's Name</option>
-                                <option value="2">Book Title</option>
-                            </select>
-                        </div>
-                    </div>
+        <div id="content">
+        <form action = "lend-or-receive.php" method = "post">
+            <div class="row">
+                <h6><b>Student Information</b></h6><br>
+                <div class="input-field col s4">
+                    <input required id="StudName" type="text" class="validate" name="barcode" pattern="[A-Z0-9]{2,}">
+                    <label class="active center" for="StudName">Barcode</label>
                 </div>
 
+                <div class="input-field col s4">
+                    <input required id="StudNo" type="text" class="validate" name="idnum" pattern="[A-Z0-9\-]{2,}">
+                    <label class="active center" for="StudNo">ID Number</label>
+                </div>
+
+                <div class="col s4">
+                    <!--<a class="waves-effect waves-light btn active" style="margin-top: 11%" href="Acquisition_Print.html">Print</a>-->
+                    <button type="submit" class="waves-effect waves-light btn active" style="margin-top: 6%" type="submit" value="search" name="lendButton">Lend</button>
+                </div>
             </div>
         </div>
         </form>
-    </div>
 
+    </div>
 </div>
 </body>
 <!--Import jQuery before materialize.js-->
