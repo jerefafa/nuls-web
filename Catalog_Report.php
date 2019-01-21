@@ -72,6 +72,7 @@ include "startup.php";
             }
             if($flag) {
                 if ($stmt = $conn->query($sql)) {
+                    $flag = mysqli_num_rows($stmt) > 0;
                     while ($row = $stmt->fetch_object()) {
                         echo "
                     <tr>

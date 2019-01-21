@@ -88,7 +88,7 @@ include "startup.php";
             }
             if($flag) {
                 if ($stmt = $conn->query($sql)) {
-
+                    $flag = mysqli_num_rows($stmt) > 0;
                     while ($row = $stmt->fetch_object()) {
                         if($cmbValue == 0) {
                             $str = "<i>Checked in " . $row->date_borrowed  . "</i> from <b>" . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . ": " . $row->id_number . ")<br>";

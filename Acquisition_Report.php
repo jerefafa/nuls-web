@@ -79,12 +79,13 @@ include "startup.php";
 
                 $startDate= date_format(date_create($_POST['txtStartDate']),"Y-m-d");
                 $endDate=  date_format(date_create($_POST['txtEndDate']),"Y-m-d");
-                $sql="SELECT * FROM `acquisition` WHERE `date_delivered` BETWEEN ('$startDate' AND '$endDate') AND `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
+                $sql="SELECT * FROM `acquisition` WHERE (`date_delivered` BETWEEN '$startDate' AND '$endDate') AND `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
             }else{
                 $sql="SELECT * FROM `acquisition` WHERE `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
             }
             if($flag) {
                 if ($stmt = $conn->query($sql)) {
+                    $flag = mysqli_num_rows($stmt) > 0;
                     while ($row = $stmt->fetch_object()) {
                         echo "<tr>
                     <td>" . $row->title . "</td>
