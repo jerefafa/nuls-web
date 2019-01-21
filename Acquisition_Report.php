@@ -79,27 +79,26 @@ include "startup.php";
 
                 $startDate= date_format(date_create($_POST['txtStartDate']),"Y-m-d");
                 $endDate=  date_format(date_create($_POST['txtEndDate']),"Y-m-d");
-                $sql="SELECT * FROM `acquisition` WHERE `date_delivered` BETWEEN '$startDate' AND '$endDate' AND `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
+                $sql="SELECT * FROM `acquisition` WHERE `date_delivered` BETWEEN ('$startDate' AND '$endDate') AND `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
             }else{
                 $sql="SELECT * FROM `acquisition` WHERE `date_deleted` IS NULL ORDER BY `date_delivered` ASC";
             }
-
-            if($stmt = $conn->query($sql) && $flag){
-
-                while ($row=$stmt->fetch_object()){
-                    echo "<tr>
-                    <td>".$row->title."</td>
-                    <td>".$row->author."</td>
-                    <td>".$row->edition."</td>
-                    <td>".date_format(date_create($row->copyright_date),"M d Y")."</td>
-                    <td>".$row->price."</td>
-                    <td>".date_format(date_create($row->date_delivered),"M d Y")."</td>
-                    <td>".date_format(date_create($row->date_processed),"M d Y")."</td>
-                    <td>".date_format(date_create($row->date_of_shelving),"M d Y")."</td>
-                    <td>".$row->quantity."</td>
+            if($flag) {
+                if ($stmt = $conn->query($sql)) {
+                    while ($row = $stmt->fetch_object()) {
+                        echo "<tr>
+                    <td>" . $row->title . "</td>
+                    <td>" . $row->author . "</td>
+                    <td>" . $row->edition . "</td>
+                    <td>" . date_format(date_create($row->copyright_date), "M d Y") . "</td>
+                    <td>" . $row->price . "</td>
+                    <td>" . date_format(date_create($row->date_delivered), "M d Y") . "</td>
+                    <td>" . date_format(date_create($row->date_processed), "M d Y") . "</td>
+                    <td>" . date_format(date_create($row->date_of_shelving), "M d Y") . "</td>
+                    <td>" . $row->quantity . "</td>
                     </tr>";
+                    }
                 }
-
             }
             else
             {
