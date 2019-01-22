@@ -18,8 +18,8 @@ if(isset($_POST["program_id"])){
         $stmt = $conn->query("UPDATE `programs` SET program='".$_POST['aprogram']."' WHERE program_id = '".$_POST['program_id']."'");
         if($stmt){
             echo "<script>swal('','College Updated Successfully','success');
-    setInterval(()=> {
-        location.href='Program.php';
+            setInterval(()=> {
+        window.history.go(-2);
     }, 2000);
 </script>";
         }
@@ -27,7 +27,7 @@ if(isset($_POST["program_id"])){
         else {
             echo "<script>swal('','College Update Error','error');
          setInterval(() => {
-             location.href='Program.php';
+             window.history.go(-2);
          }, 2000);
 </script>";
         }
