@@ -19,7 +19,7 @@ if(isset($_POST["material_type_id"])){
         if($stmt){
             echo "<script>swal('','Material Type Updated Successfully','success');
             setInterval(() => {
-                location.href='MaterialType.php';
+                window.history.go(-2);
             }, 2000);
 </script>";
         }
@@ -27,7 +27,7 @@ if(isset($_POST["material_type_id"])){
         else {
             echo "<script>swal('','Material Type Update Error','error');
             setInterval(() => {
-                location.href='MaterialType.php';
+                window.history.go(-2);
             }, 2000);
     </script>";
         }

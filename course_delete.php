@@ -25,12 +25,12 @@ if(isset($_POST["course_id"])){
         if ($stmt) {
             echo "<script>swal('','Course Deleted Successfully','success');
             setInterval(() => {
-location.href='Courses.php';
+            window.history.back();
             }, 2000);</script>";
         } else {
             echo "<script>swal('','Cannot Delete Course','error');
             setInterval(() => {
-                location.href='Courses.php.php';
+                window.history.back();
             }, 2000);</script>";
         }
     }

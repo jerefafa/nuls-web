@@ -5,7 +5,7 @@ if(!isset($_GET["wildcard"])){
 
 }
 $keyword = $_GET['wildcard'];
-error_reporting(0);
+//error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +48,7 @@ error_reporting(0);
     <div id="content">
         <?php
         $getSearch = $_GET["wildcard"];
+        $material_id = $_GET["material_type"];
         if(!preg_match("/^[a-zA-Z0-9#_.+&(),\-\s]*$/", $getSearch)){
             ?>
             <script>
@@ -57,8 +58,7 @@ error_reporting(0);
             <?php
         }
         else{
-
-        $stmt = $conn->query("SELECT DISTINCT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`acquisition`.`edition`,`acquisition`.`quantity` FROM `acquisition` INNER JOIN `keywords`,`subjects`,`catalog` WHERE (`acquisition`.`title` LIKE '%" . $keyword . "%' OR `acquisition`.`author` LIKE '%" . $keyword . "%') OR (`keywords`.`keyword` LIKE '%" . $keyword . "%' AND `keywords`.`acquisition_number` = `acquisition`.`acquisition_number`) OR (`subjects`.`subject_name` LIKE '%" . $keyword . "%' AND `acquisition`.`subject_id` = `subjects`.`subject_id`) AND (`acquisition`.`date_deleted` IS NULL)");
+        $stmt = $conn->query("SELECT DISTINCT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`acquisition`.`edition`,`acquisition`.`quantity` FROM `acquisition` INNER JOIN `keywords`,`subjects`,`catalog` WHERE ((`acquisition`.`title` LIKE '%".$keyword."%' OR `acquisition`.`author` LIKE '%".$keyword."%') OR (`keywords`.`keyword` LIKE '%".$keyword."%' AND `keywords`.`acquisition_number` = `acquisition`.`acquisition_number`) OR (`subjects`.`subject_name` LIKE '%".$keyword."%' AND `acquisition`.`subject_id` = `subjects`.`subject_id`)) AND (catalog.material_type_id = '$material_id') AND (`acquisition`.`date_deleted` IS NULL) ");
         ?>
         <h6><b>Search for (library). Searched in: National University Learning Resource Center</b></h6>
 
@@ -66,7 +66,6 @@ error_reporting(0);
             <thead>
             <tr>
                 <th>Titles: <?php echo mysqli_num_rows($stmt) ?></th>
-
             </tr>
             </thead>
 
@@ -75,7 +74,7 @@ error_reporting(0);
             while ($row = $stmt->fetch_object()) {
                 $numAvailable = mysqli_num_rows($conn->query("SELECT * FROM `catalog` WHERE `acquisition_number` = '" . $row->acquisition_number . "'")) - mysqli_num_rows($conn->query("SELECT * FROM `circulation` INNER JOIN `acquisition` INNER JOIN `catalog` WHERE `circulation`.`barcode` = `catalog`.`barcode` AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND `acquisition`.`acquisition_number` = '" . $row->acquisition_number . "' AND `circulation`.`date_returned` IS NULL"));
                 if ($numAvailable > 0) {
-                    echo "<tr>
+                    echo "<tr>    
                         <td>
                        <a href='Student_SearchDetails.php?acquisition_num=$row->acquisition_number'><b>$row->title</b></a><br>
                        Author: $row->author<br>
@@ -95,9 +94,9 @@ error_reporting(0);
 
     </div>
 
-</div>
 </body>
 <!--Import jQuery before materialize.js-->
+</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="MaterializeCSS/materialize/js/materialize.min.js"></script>
 <script>

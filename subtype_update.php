@@ -19,7 +19,7 @@ if(isset($_POST["subtype_id"])){
         if($stmt){
             echo "<script>swal('','Subtype Updated Successfully','success');
             setInterval(() => {
-                location.href='Subtype.php';
+                window.history.go(-2);
             }, 2000);
 </script>";
         }
@@ -27,7 +27,7 @@ if(isset($_POST["subtype_id"])){
         else {
             echo "<script>swal('','Subtype Update Error','error');
             setInterval(() => {
-                location.href='Subtype.php';
+                window.history.go(-2);
             }, 2000);
 </script>";
         }

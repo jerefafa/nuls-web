@@ -19,14 +19,14 @@ if(isset($_POST["supplier_id"])){
         if($stmt){
             echo "<script>swal('','Supplier Updated Successfully','success')
             setInterval(()=> {
-                location.href='Supplier.php';
+                window.history.go(-2);
             }, 2000);</script>";
         }
 
         else {
             echo "<script>swal('','Supplier Update Error','error');
             setInterval(() => {
-                location.href='Supplier.php';
+                window.history.go(-2);
             }, 2000)
             </script>";
         }

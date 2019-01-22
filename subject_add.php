@@ -32,12 +32,12 @@ if(isset($_POST['asubject'])){
     if($stmt){
         echo "<script>swal('','Subject Added Successfully','success');
 setInterval(() => {
-            location.href='Add_Subject.php';
+            window.history.go(-2);
         }, 2000);</script>";
     }
     else{
         echo "<script>swal('','Error Adding the Subject','error')setInterval(() => {
-            location.href='Add_Subject.php';
+            window.history.go(-2);
         }, 2000);</script>";
     }
 }

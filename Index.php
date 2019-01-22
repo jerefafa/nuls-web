@@ -39,98 +39,112 @@
     <div id="content">
         <form action="Student_LibrarySearch.php" method="get">
         <div class="valign-wrapper row">
-            <div class="col s10 pull-s1 m6 pull-m3 l6 pull-l4">
+            <div class="col s12 pull-s1 m6 pull-m3 l6 pull-l4">
                 <div class="input-field col s12 white">
                     <input  href="Student_LibrarySearch.php" class="prefix material-icons" value="search" type="submit" style="border: 0px;background: transparent;float: left;margin-top: 2.5%;margin-right: 50%">
                     <input id="search" placeholder="Search" type="text" class="validate" name="wildcard">
 
                 </div>
-                <div class="col s12">
-                    <ul class="collapsible white" data-collapsible="accordion">
-                        <li>
-                            <div class="collapsible-header black-text">Narrow your search to...
-                                <i class="material-icons right-align">arrow_drop_down</i>
-                            </div>
-                            <div class="collapsible-body">
-                                    <span>
-                                        <select>
-                                          <option value="" disabled selected>Location:</option>
-                                          <option value="1">National University Learning Resource Center</option>
-                                        </select>
-
-                                        <select>
-                                          <option value="" disabled selected>Material Type:</option>
-                                          <option value="1">Any Type</option>
-                                          <option value="2">Artifact</option>
-                                          <option value="3">Books</option>
-                                          <option value="4">Computer Files</option>
-                                          <option value="5">Electronic Books</option>
-                                          <option value="6">Equipments</option>
-                                          <option value="7">Kits</option>
-                                          <option value="8">Manuscripts</option>
-                                          <option value="9">Maps, Globes, Atlases</option>
-                                          <option value="10">Mixed Materials</option>
-                                          <option value="11">Music (printed)</option>
-                                          <option value="12">Pictures</option>
-                                          <option value="13">Recording (musical)</option>
-                                          <option value="14">Recording (nonmusical)</option>
-                                          <option value="15">Serials</option>
-                                          <option value="16">Videos</option>
-                                        </select>
-
-                                        <h6>Reading Level:</h6>
-                                        <input id="readinglevel_From" type="text" class="validate" placeholder="From" style="width: 47%">
-                                        to
-                                        <input id="readinglevel_To" type="text" class="validate" style="width: 47%">
-
-                                        <h6>Interest Level:</h6>
-                                         <select>
-                                          <option value="1">Unlimited</option>
-                                          <option value="2">Preschool</option>
-                                          <option value="3">K</option>
-                                          <option value="4">1</option>
-                                          <option value="5">2</option>
-                                          <option value="6">3</option>
-                                          <option value="7">4</option>
-                                          <option value="8">5</option>
-                                          <option value="9">6</option>
-                                          <option value="10">7</option>
-                                          <option value="11">8</option>
-                                          <option value="12">9</option>
-                                          <option value="13">10</option>
-                                          <option value="14">11</option>
-                                          <option value="15">12</option>
-                                          <option value="16">Young Adult</option>
-                                          <option value="16">Adult</option>
-                                          <option value="16">Professional</option>
-                                        </select>
-                                        to
-                                         <select>
-                                          <option value="" disabled selected>Material Type:</option>
-                                          <option value="1">Any Type</option>
-                                          <option value="2">Artifact</option>
-                                          <option value="3">Books</option>
-                                          <option value="4">Computer Files</option>
-                                          <option value="5">Electronic Books</option>
-                                          <option value="6">Equipments</option>
-                                          <option value="7">Kits</option>
-                                          <option value="8">Manuscripts</option>
-                                          <option value="9">Maps, Globes, Atlases</option>
-                                          <option value="10">Mixed Materials</option>
-                                          <option value="11">Music (printed)</option>
-                                          <option value="12">Pictures</option>
-                                          <option value="13">Recording (musical)</option>
-                                          <option value="14">Recording (nonmusical)</option>
-                                          <option value="15">Serials</option>
-                                          <option value="16">Videos</option>
-                                        </select>
-                                    </span>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="col s12 pull-s1 m6 pull-m3 l6 pull-l4" style="width: 104.5%;margin-left: 31%">
+                    <select class="browser-default" name="material_type">
+                        <?php
+                        require "connection.php";
+                        $stmt = $conn->query("SELECT * FROM `material_types` WHERE `date_deleted` IS NULL");
+                        while ($row = $stmt->fetch_object()) {
+                            ?>
+                            <option value="<?=$row->material_type_id?>"><?=$row->material_type?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
 
-            </div>
+<!--                <div class="col s12">-->
+<!--                    <ul class="collapsible white" data-collapsible="accordion">-->
+<!--                        <li>-->
+<!--                            <div class="collapsible-header black-text">Narrow your search to...-->
+<!--                                <i class="material-icons right-align">arrow_drop_down</i>-->
+<!--                            </div>-->
+<!--                            <div class="collapsible-body">-->
+<!--                                    <span>-->
+<!--                                        <select>-->
+<!--                                          <option value="" disabled selected>Location:</option>-->
+<!--                                          <option value="1">National University Learning Resource Center</option>-->
+<!--                                        </select>-->
+<!---->
+<!--                                        <select>-->
+<!--                                          <option value="" disabled selected>Material Type:</option>-->
+<!--                                          <option value="1">Any Type</option>-->
+<!--                                          <option value="2">Artifact</option>-->
+<!--                                          <option value="3">Books</option>-->
+<!--                                          <option value="4">Computer Files</option>-->
+<!--                                          <option value="5">Electronic Books</option>-->
+<!--                                          <option value="6">Equipments</option>-->
+<!--                                          <option value="7">Kits</option>-->
+<!--                                          <option value="8">Manuscripts</option>-->
+<!--                                          <option value="9">Maps, Globes, Atlases</option>-->
+<!--                                          <option value="10">Mixed Materials</option>-->
+<!--                                          <option value="11">Music (printed)</option>-->
+<!--                                          <option value="12">Pictures</option>-->
+<!--                                          <option value="13">Recording (musical)</option>-->
+<!--                                          <option value="14">Recording (nonmusical)</option>-->
+<!--                                          <option value="15">Serials</option>-->
+<!--                                          <option value="16">Videos</option>-->
+<!--                                        </select>-->
+<!---->
+<!--                                        <h6>Reading Level:</h6>-->
+<!--                                        <input id="readinglevel_From" type="text" class="validate" placeholder="From" style="width: 47%">-->
+<!--                                        to-->
+<!--                                        <input id="readinglevel_To" type="text" class="validate" style="width: 47%">-->
+<!---->
+<!--                                        <h6>Interest Level:</h6>-->
+<!--                                         <select>-->
+<!--                                          <option value="1">Unlimited</option>-->
+<!--                                          <option value="2">Preschool</option>-->
+<!--                                          <option value="3">K</option>-->
+<!--                                          <option value="4">1</option>-->
+<!--                                          <option value="5">2</option>-->
+<!--                                          <option value="6">3</option>-->
+<!--                                          <option value="7">4</option>-->
+<!--                                          <option value="8">5</option>-->
+<!--                                          <option value="9">6</option>-->
+<!--                                          <option value="10">7</option>-->
+<!--                                          <option value="11">8</option>-->
+<!--                                          <option value="12">9</option>-->
+<!--                                          <option value="13">10</option>-->
+<!--                                          <option value="14">11</option>-->
+<!--                                          <option value="15">12</option>-->
+<!--                                          <option value="16">Young Adult</option>-->
+<!--                                          <option value="16">Adult</option>-->
+<!--                                          <option value="16">Professional</option>-->
+<!--                                        </select>-->
+<!--                                        to-->
+<!--                                         <select>-->
+<!--                                          <option value="" disabled selected>Material Type:</option>-->
+<!--                                          <option value="1">Any Type</option>-->
+<!--                                          <option value="2">Artifact</option>-->
+<!--                                          <option value="3">Books</option>-->
+<!--                                          <option value="4">Computer Files</option>-->
+<!--                                          <option value="5">Electronic Books</option>-->
+<!--                                          <option value="6">Equipments</option>-->
+<!--                                          <option value="7">Kits</option>-->
+<!--                                          <option value="8">Manuscripts</option>-->
+<!--                                          <option value="9">Maps, Globes, Atlases</option>-->
+<!--                                          <option value="10">Mixed Materials</option>-->
+<!--                                          <option value="11">Music (printed)</option>-->
+<!--                                          <option value="12">Pictures</option>-->
+<!--                                          <option value="13">Recording (musical)</option>-->
+<!--                                          <option value="14">Recording (nonmusical)</option>-->
+<!--                                          <option value="15">Serials</option>-->
+<!--                                          <option value="16">Videos</option>-->
+<!--                                        </select>-->
+<!--                                    </span>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
         </div>
         </form>
 

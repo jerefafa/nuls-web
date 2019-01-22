@@ -19,14 +19,14 @@ if(isset($_POST["subject_id"])){
         if($stmt){
             echo "<script>swal('','Program Updated Successfully','success');
             setInterval(() => {
-location.href='Assets.php';
+window.history.go(-2);
             },2000);</script>";
         }
 
         else {
             echo "<script>swal('Program Update Error');
  setInterval(() => {
-location.href='Assets.php';
+window.history.go(-2);
             },2000);</script>";
         }
     }

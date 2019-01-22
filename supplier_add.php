@@ -26,7 +26,7 @@ if(isset($_POST['nSupplier'])){
     if(mysqli_num_rows($run_query)>0) {
         echo "<script>swal('','Supplier already exists.','error');
         setInterval(() => {
-            location.href='Add_Supplier.php';
+            window.history.go(-2);
         }, 2000);
 </script>";
     }
@@ -36,7 +36,7 @@ if(isset($_POST['nSupplier'])){
     if($stmt){
         echo "<script>swal('','Supplier Added Successfully','success');
             setInterval(() => {
-                 location.href=('Supplier.php');
+                 window.history.go(-2);
             }, 2000);
 </script>";
     }

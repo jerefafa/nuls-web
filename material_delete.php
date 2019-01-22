@@ -27,7 +27,7 @@ if(isset($_POST["material_type_id"])){
         if ($stmt) {
             echo "<script>swal('','Material Type Deleted Successfully','success');
             setInterval(() => {
-location.href='MaterialType.php';
+            window.history.go(-2);
             }, 2000);</script>";
         }
     }

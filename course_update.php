@@ -21,7 +21,7 @@ else{
         echo "<script>
                swal('','Course Updated','success');
                setInterval(() => {
-                   location.href='Courses.php';
+                   window.history.go(-2);
                }, 2000);
         </script>";
     }
@@ -29,7 +29,7 @@ else{
         echo "<script>
                swal('','Update Failed','error');
                setInterval(() => {
-                   location.href='Courses.php';
+                   window.history.go(-2);
                }, 2000);
         </script>";
     }

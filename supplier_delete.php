@@ -24,7 +24,7 @@ if(isset($_POST["supplier_id"])){
         if ($stmt) {
             echo "<script>swal('','Supplier Deleted Successfully','success');
             setInterval(() => {
-                  location.href='Supplier.php';
+                  window.history.back();
             },2000);         </script>";
         }
     }

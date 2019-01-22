@@ -26,7 +26,7 @@ if(isset($_POST["subject_id"])){
         if ($stmt) {
             echo "<script>swal('','Subject Deleted Successfully','success');
                setInterval(() => {
-                location.href='Assets.php';   
+                window.history.back();   
                }, 2000);
                 </script>";
         }

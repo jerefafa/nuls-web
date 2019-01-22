@@ -23,7 +23,7 @@ if(isset($_POST['addProg'])){
     if(mysqli_num_rows($run_query)>0) {
         echo "<script>swal('','College already exists.','error');
         setInterval(() => {
-            location.href=('Program.php');
+            window.history.go(-2);
         },2000);
 </script>";
     }
@@ -33,7 +33,7 @@ if(isset($_POST['addProg'])){
         if($stmt){
             echo "<script>swal('','College Added Successfully','success');
     setInterval(() => {
-         location.href=('Program.php');
+         window.history.go(-2);
     }, 2000);
 </script>";
         }

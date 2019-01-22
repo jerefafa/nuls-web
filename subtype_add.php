@@ -23,7 +23,7 @@ if(isset($_POST['addSubtype'])){
     if(mysqli_num_rows($run_query)>0) {
         echo "<script>swal('','Subtype already exists.','error');
         setInterval(() => {
-            location.href='Add_Subtype.php';
+            window.history.go(-2);
         }, 2000);
 </script>";
     }
@@ -33,7 +33,7 @@ if(isset($_POST['addSubtype'])){
     if($stmt){
         echo "<script>swal('','Subtype Added Successfully','success');
         setInterval(() => {
-             location.href=('Subtype.php');
+             window.history.go(-2);
         }, 2000);
         
 </script>";

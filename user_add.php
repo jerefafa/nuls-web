@@ -39,7 +39,7 @@ if(isset($_POST['addUser'])){
     if (checkPassword($password, $fpassword) == true){
         echo "<script>swal('','Password Mismatch','error');
             setInterval(() => {
-                location.href='Add_User.php';
+                window.history.back();
             }, 2000);   
         </script>";
     }
@@ -51,13 +51,13 @@ if(isset($_POST['addUser'])){
         if ($stmt) {
             echo "<script>swal('','User Added Successfully','success');
             setInterval(() => {
-                location.href='Users.php';
+                window.history.go(-2);
             }, 2000);
 </script>";
         } else {
             echo "<script>swal('','Error Adding the User','error');
             setInterval(() => {
-                location.href='Add_User.php';
+                window.history.go(-2);
             }, 2000);
         </script>";
         }

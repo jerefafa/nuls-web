@@ -86,7 +86,7 @@ if(!isset($_GET["title"])){
                     Edition : " . $row->edition . "<br>
                     Copyright Date: " . date_format(date_create($row->copyright_date), 'd M, Y') . "<br>
                     
-                    
+                  
                 </td></tr>";
                 }
             }

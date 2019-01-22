@@ -22,14 +22,14 @@ else{
         echo "<script>
             swal('','Course added','success');
             setInterval(() => {
-                location.href='Courses.php';
+                window.history.go(-2);
             }, 2000);
         </script>";
     }else{
         echo "<script>
             swal('','Adding Failed','error');
             setInterval(() => {
-                location.href='Courses.php';
+                window.history.go(-2);
             }, 2000);
         </script>";
     }

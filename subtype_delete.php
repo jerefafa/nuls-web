@@ -26,7 +26,7 @@ if(isset($_POST["subtype_id"])){
         if ($stmt) {
             echo "<script>swal('','Subtype Deleted Successfully','success');
                setInterval(() => {
-                  location.href='Subtype.php'; 
+                  window.history.back(); 
                },2000);</script>";
         }
     }
