@@ -40,7 +40,7 @@ include "startup.php";
                 </div>
 
                 <div class="input-field col s4">
-                    <input required id="mname" type="text" class="validate" name="mname" pattern="[A-Za-z\s]{2,}">
+                    <input id="mname" type="text" class="validate" name="mname" pattern="[A-Za-z\s]{2,}">
                     <label class="active center" for="MiddleName">Middle Name</label>
                 </div>
 
@@ -148,7 +148,8 @@ include "startup.php";
         selectYears: 15, // Creates a dropdown of 15 years to control year,
         today: 'Today',
         clear: 'Clear',
-        close: 'Ok',
+            close: 'Ok',
+            format: 'mmm dd yyyy',
         closeOnSelect: false // Close upon selecting a date,
     });
   /**  function check(){

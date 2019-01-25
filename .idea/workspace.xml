@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/delete_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delete_user.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
@@ -104,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AddCopies.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="188">
+              <caret line="244" column="13" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -119,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UserManagement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="418">
+              <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -141,10 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nav</find>
-      <find>releca`</find>
-      <find>toa</find>
-      <find>TOa</find>
       <find>returned</find>
       <find>Prog</find>
       <find>courses</find>
@@ -171,6 +167,10 @@
       <find>lead</find>
       <find>selec</find>
       <find>Update</find>
+      <find>midd</find>
+      <find>forma</find>
+      <find>birth</find>
+      <find>mater</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,8 +228,8 @@
         <option value="$PROJECT_DIR$/Statistics.php" />
         <option value="$PROJECT_DIR$/AddTitle.php" />
         <option value="$PROJECT_DIR$/UserManagement_Update.php" />
-        <option value="$PROJECT_DIR$/UserManagement.php" />
         <option value="$PROJECT_DIR$/delete_user.php" />
+        <option value="$PROJECT_DIR$/UserManagement.php" />
       </list>
     </option>
   </component>
@@ -387,7 +387,7 @@
       <workItem from="1548081783435" duration="2129000" />
       <workItem from="1548146946991" duration="2932000" />
       <workItem from="1548149940970" duration="2997000" />
-      <workItem from="1548384139030" duration="6091000" />
+      <workItem from="1548384139030" duration="6703000" />
     </task>
     <servers />
   </component>
@@ -406,7 +406,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="515597000" />
+    <option name="totallyTimeSpent" value="516209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AddCopies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AddCopiesCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -767,13 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
         </state>
       </provider>
     </entry>
@@ -805,6 +791,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AddCopies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="244" column="13" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
         </state>
       </provider>
     </entry>
