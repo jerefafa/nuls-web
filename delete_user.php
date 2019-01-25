@@ -26,7 +26,7 @@ if(isset($_POST["librarian_id"])){
         if ($stmt) {
             echo "<script>swal('','Librarian Deleted Successfully','success');
             setInterval(() => {
-                location.href='UserManagementList.php';
+                window.history.back();
             }, 2000);</script>";
         }
     }
