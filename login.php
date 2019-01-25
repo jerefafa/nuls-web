@@ -78,7 +78,7 @@ if(isset($_POST["username"])){
     else{
         ?>
         <script>
-            swal("","Login Success", "success");
+            swal("","Invalid Username and/or Password", "error");
             setInterval(() => {
                 location.href="Home.php";
             }, 2000);
