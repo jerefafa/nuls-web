@@ -64,7 +64,6 @@ if(isset($_GET['librarian_id'])){
 
                 <div class="col s6">
                     <select required class="browser-default" required name="gender">
-                        <option value="" disabled selected>Gender</option>
                         <option value="Female"  <?php
                         $sql = $conn->query("SELECT `gender` FROM `librarians` WHERE   `librarian_id` = '".$_GET["librarian_id"]."'");
                         while ($row = $sql->fetch_object()) {
@@ -103,7 +102,7 @@ if(isset($_GET['librarian_id'])){
                         <option value="Reference Librarian"  <?php
                         $sql = $conn->query("SELECT `position` FROM `librarians` WHERE   `librarian_id` = '".$_GET["librarian_id"]."'");
                         while ($row = $sql->fetch_object()) {
-                            if($row->position == "Reference") {
+                            if($row->position == "Reference Librarian") {
                                 echo "selected";
                             }
                         }

@@ -79,7 +79,6 @@ include "startup.php";
 
                 <div class="col s6">
                     <select required class="browser-default" name="position">
-                        <option value="" disabled selected>Position</option>
                         <option value="Chief Librarian">Chief Librarian</option>
                         <option value="Reference Librarian">Reference Librarian</option>
                         <option value="Technical Librarian">Technical Librarian and Archivist</option>

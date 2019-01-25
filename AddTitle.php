@@ -4,6 +4,7 @@ if(!isset($_GET["addCopy"])){
     header("location:Catalog.php");
 }
 else{
+    $flag = false;
     $stmt = $conn->query("SELECT `quantity`,`title` FROM `acquisition` WHERE `acquisition_number`='".$_GET["acquisition_number"]."'");
     $stmt2 = $conn->query("SELECT * FROM `catalog` WHERE `acquisition_number`='".$_GET["acquisition_number"]."' AND `date_deleted` IS NULL");
     while ($row=$stmt->fetch_object()){
@@ -13,9 +14,16 @@ else{
                 window.history.back();
                 </script>";
         }
-        else{
+        else {
             $title = $row->title;
             $acquisition_number = $_GET["acquisition_number"];
+            $st = $conn->query("SELECT * FROM `catalog` WHERE `acquisition_number` = '".$_GET["acquisition_number"]."' AND `date_deleted` IS NULL");
+            if(mysqli_num_rows($st)){
+                $flag = true;
+                while ($rw = $st->fetch_object()) {
+                    $obj = $rw;
+                }
+            }
         }
     }
 }
@@ -53,137 +61,272 @@ else{
     <div id="content">
 
         <div class="row">
-            <form class="col s12" action="AddCopyCatalog.php" method="post">
+            <?php
+            if(!$flag) {
+                ?>
+                <form class="col s12" action="AddCopyCatalog.php" method="post">
 
-                <h6><b>Title Information</b></h6>
+                    <h6><b>Title Information</b></h6>
 
-                <div class="row">
-                    <div class="input-field col s3">
-                        <input type="hidden" name="acquisition_number" value="<?php echo $acquisition_number?>">
-                        <input id="leading_article" type="text" class="validate" name="leading_article">
-                        <label for="leading_article">Leading Article</label>
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="hidden" name="acquisition_number" value="<?php echo $acquisition_number ?>">
+                            <input id="leading_article" type="text" class="validate" name="leading_article">
+                            <label for="leading_article">Leading Article</label>
+                        </div>
+                        <div class="input-field col s9">
+                            <input disabled value="<?php echo $title ?>" id="title" type="text" class="validate">
+                            <label for="title">Title</label>
+                        </div>
                     </div>
-                    <div class="input-field col s9">
-                        <input disabled value="<?php echo $title?>" id="title" type="text" class="validate">
-                        <label for="title">Title</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="subtitle" type="text" class="validate" name="subtitle">
-                        <label for="subtitle">Subtitle</label>
-                    </div>
-                </div>
-
-                <h6><b>Standard Numbers</b></h6>
-                <div class="row">
-                    <div class="input-field col s4">
-                        <input id="LCCN" type="text" class="validate" name="lccn">
-                        <label for="LCCN">LCCN</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <input id="ISBN" type="text" class="validate" name="isbn">
-                        <label for="ISBN">ISBN</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <input id="ISSN" type="text" class="validate" name="issn">
-                        <label for="ISSN">ISSN</label>
-                    </div>
-                    <div class="col s4">
-                        <p>
-                            <input name="assign" type="checkbox" id="bc1">
-                            <label for="bc1">Assign to next barcode</label>
-                        </p>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="subtitle" type="text" class="validate" name="subtitle">
+                            <label for="subtitle">Subtitle</label>
+                        </div>
                     </div>
 
-                    <div class="col s4">
-                        <p>
-                            <input type="text" name="barcode" placeholder="Input Barcode" id="barcode">
+                    <h6><b>Standard Numbers</b></h6>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="LCCN" type="text" class="validate" name="lccn">
+                            <label for="LCCN">LCCN</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="ISBN" type="text" class="validate" name="isbn">
+                            <label for="ISBN">ISBN</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="ISSN" type="text" class="validate" name="issn">
+                            <label for="ISSN">ISSN</label>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                                <input name="assign" type="checkbox" id="bc1">
+                                <label for="bc1">Assign to next barcode</label>
+                            </p>
+                        </div>
 
-                        </p>
-                    </div>
-                    <div class="input-field  col s4">
+                        <div class="col s4">
+                            <p>
+                                <input type="text" name="barcode" placeholder="Input Barcode" id="barcode">
+
+                            </p>
+                        </div>
+                        <div class="input-field  col s4">
 
                             <input type="text" name="call_number" id="callnumber">
-                             <label for="callnumber">Call Number</label>
+                            <label for="callnumber">Call Number</label>
 
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col s6">
-                        <label>Material Type</label>
-                        <select name="material_type">
-                            <?php
-                            $stmt = $conn->query("SELECT * FROM `material_types` WHERE `date_deleted` IS NULL");
-                            while ($row=$stmt->fetch_object()){
+                    <div class="row">
+                        <div class="col s6">
+                            <label>Material Type</label>
+                            <select name="material_type">
+                                <?php
+                                $stmt = $conn->query("SELECT * FROM `material_types` WHERE `date_deleted` IS NULL");
+                                while ($row = $stmt->fetch_object()) {
 
                                     echo "<option value='" . $row->material_type_id . "'>" . $row->material_type . "</option>";
 
-                            }
-
-                            ?>
-                        </select>
-                    </div>
-                    <div class="col s6">
-                        <label>Subtype</label>
-                        <select name="subtype">
-                            <option selected  value="">None</option>
-                            <?php
-                            $stmt = $conn->query("SELECT * FROM `subtypes` WHERE `date_deleted` IS NULL");
-                            while ($row=$stmt->fetch_object()){
-                                if ($subtype==$row->subtype_id){
-                                    echo "<option value='".$row->subtype_id."' selected>".$row->subtype."</option>";
-                                }
-                                else {
-                                    echo "<option value='".$row->subtype_id."'>".$row->subtype."</option>";
                                 }
 
-                            }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="col s6">
+                            <label>Subtype</label>
+                            <select name="subtype">
+                                <option selected value="">None</option>
+                                <?php
+                                $stmt = $conn->query("SELECT * FROM `subtypes` WHERE `date_deleted` IS NULL");
+                                while ($row = $stmt->fetch_object()) {
+                                    if ($subtype == $row->subtype_id) {
+                                        echo "<option value='" . $row->subtype_id . "' selected>" . $row->subtype . "</option>";
+                                    } else {
+                                        echo "<option value='" . $row->subtype_id . "'>" . $row->subtype . "</option>";
+                                    }
 
-                            ?>
-                        </select>
+                                }
+
+                                ?>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
 
+                    <h6><b>Publication Information</b></h6>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="place" type="text" class="validate" name="publication_place">
+                            <label for="place">Place</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="publisher" type="text" class="validate" name="publisher">
+                            <label for="publisher">Publisher</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="dates" type="text" class="datepicker" name="publication_date">
+                            <label for="dates">Date</label>
+                        </div>
+                    </div>
 
-                <h6><b>Publication Information</b></h6>
-                <div class="row">
-                    <div class="input-field col s4">
-                        <input id="place" type="text" class="validate" name="publication_place">
-                        <label for="place">Place</label>
+                    <h6><b>Physical Description</b></h6>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="extent" type="text" class="validate" name="extent">
+                            <label for="extent">Extent</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="details" type="text" class="validate" name="other_details">
+                            <label for="Details">Other Details</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="size" type="text" class="validate" name="size">
+                            <label for="size">Size</label>
+                        </div>
                     </div>
-                    <div class="input-field col s4">
-                        <input id="publisher" type="text" class="validate" name="publisher">
-                        <label for="publisher">Publisher</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <input  id="dates" type="text" class="datepicker" name="publication_date">
-                        <label for="dates">Date</label>
-                    </div>
-                </div>
 
-                <h6><b>Physical Description</b></h6>
-                <div class="row">
-                    <div class="input-field col s4">
-                        <input id="extent" type="text" class="validate" name="extent">
-                        <label for="extent">Extent</label>
+                    <div class="right-align">
+                        <input type="submit" value="Add Copy" class="btn" name="add_copy">
                     </div>
-                    <div class="input-field col s4">
-                        <input id="details" type="text" class="validate" name="other_details">
-                        <label for="Details">Other Details</label>
+                </form>
+                <?php
+            }
+            else {
+            ?>
+                  <form class="col s12" action="AddCopyCatalog.php" method="post">
+                    <h6><b>Title Information</b></h6>
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="hidden" name="acquisition_number" value="<?php echo $acquisition_number ?>">
+                            <input id="leading_article" type="text" class="validate" name="leading_article" value="<?=$obj->leading_article?>">
+                            <label for="leading_article">Leading Article</label>
+                        </div>
+                        <div class="input-field col s9">
+                            <input disabled value="<?php echo $title ?>" id="title" type="text" class="validate">
+                            <label for="title">Title</label>
+                        </div>
                     </div>
-                    <div class="input-field col s4">
-                        <input  id="size" type="text" class="validate" name="size">
-                        <label for="size">Size</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="subtitle" type="text" class="validate" name="subtitle" value="<?=$obj->subtitle?>">
+                            <label for="subtitle">Subtitle</label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="right-align">
-                    <input type="submit" value="Add Copy" class="btn" name="add_copy">
-                </div>
-            </form>
+                    <h6><b>Standard Numbers</b></h6>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="LCCN" type="text" class="validate" name="lccn" value="<?=$obj->lccn?>">
+                            <label for="LCCN">LCCN</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="ISBN" type="text" class="validate" name="isbn" value="<?=$obj->isbn?>">
+                            <label for="ISBN">ISBN</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="ISSN" type="text" class="validate" name="issn" value="<?=$obj->issn?>">
+                            <label for="ISSN">ISSN</label>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                                <input name="assign" type="checkbox" id="bc1">
+                                <label for="bc1">Assign to next barcode</label>
+                            </p>
+                        </div>
+
+                        <div class="col s4">
+                            <p>
+                                <input type="text" name="barcode" placeholder="Input Barcode" id="barcode">
+
+                            </p>
+                        </div>
+                        <div class="input-field  col s4">
+
+                            <input type="text" name="call_number" id="callnumber" value="<?=$obj->call_number?>">
+                            <label for="callnumber">Call Number</label>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s6">
+                            <label>Material Type</label>
+                            <select name="material_type">
+                                <?php
+                                $stmt = $conn->query("SELECT * FROM `material_types` WHERE `date_deleted` IS NULL");
+                                while ($row = $stmt->fetch_object()) {
+
+                                    echo "<option value='" . $row->material_type_id . "'>" . $row->material_type . "</option>";
+
+                                }
+
+                                ?>
+                            </select>
+                        </div>
+                        <div class="col s6">
+                            <label>Subtype</label>
+                            <select name="subtype">
+                                <option selected value="">None</option>
+                                <?php
+                                $stmt = $conn->query("SELECT * FROM `subtypes` WHERE `date_deleted` IS NULL");
+                                while ($row = $stmt->fetch_object()) {
+                                    if ($subtype == $row->subtype_id) {
+                                        echo "<option value='" . $row->subtype_id . "' selected>" . $row->subtype . "</option>";
+                                    } else {
+                                        echo "<option value='" . $row->subtype_id . "'>" . $row->subtype . "</option>";
+                                    }
+
+                                }
+
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <h6><b>Publication Information</b></h6>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="place" type="text" class="validate" name="publication_place" value="<?=$obj->publication_place?>">
+                            <label for="place">Place</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="publisher" type="text" class="validate" name="publisher" value="<?=$obj->publisher?>">
+                            <label for="publisher">Publisher</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="dates" type="text" class="datepicker" name="publication_date" value="<?= date_format(date_create($obj->publication_date),"M d Y"); ?>">
+                            <label for="dates">Date</label>
+                        </div>
+                    </div>
+
+                    <h6><b>Physical Description</b></h6>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="extent" type="text" class="validate" name="extent" value="<?=$obj->extent?>">
+                            <label for="extent">Extent</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="details" type="text" class="validate" name="other_details" value="<?=$obj->other_details?>">
+                            <label for="Details">Other Details</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="size" type="text" class="validate" name="size" value="<?=$obj->size?>">
+                            <label for="size">Size</label>
+                        </div>
+                    </div>
+
+                    <div class="right-align">
+                        <input type="submit" value="Add Copy" class="btn" name="add_copy">
+                    </div>
+                </form>
+                <?php
+            }
+            ?>
         </div>
 
     </div>

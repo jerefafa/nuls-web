@@ -35,7 +35,7 @@ if(isset($_POST['registerAdmin'])){
    if(mysqli_num_rows($run_query)>0) {
        echo "<script>swal('','Email Already Taken.','error');
         setInterval(() => {
-            location.href='UserManagement.php';
+            window.history.go(-2);
         }, 2000);</script>";
    }
 
@@ -43,19 +43,19 @@ if(isset($_POST['registerAdmin'])){
     if(checkPassword($lib_password, $lib_fpassword) == true && checkAge($date) == true){
         echo "<script>swal('','Password Mismatch and/or Age Restriction','error');
         setInterval(() => {
-location.href='UserManagement.php';
+                        window.history.back();
         }, 2000);</script>";
     }
     elseif (checkPassword($lib_password, $lib_fpassword) == false && checkAge($date) == true){
         echo "<script>swal('','Age Restriction','error');
         setInterval(() => {
-            location.href='UserManagement.php';
+                        window.history.back();
         }, 2000);</script>";
     }
     elseif (checkPassword($lib_password, $lib_fpassword) == true && checkAge($date) == false){
         echo "<script>swal('','Password Mismatch','error');
         setInterval(() => {
-location.href='UserManagement.php';
+            window.history.back();
         }, 2000);</script>";
     }
 //Insert Librarian
@@ -84,7 +84,7 @@ location.href='UserManagement.php';
     if($stmt2){
         echo "<script>swal('','Librarian Registered Successfully','success');
         setInterval(() => {
-location.href='UserManagementList.php';
+                        window.history.go(-2);
         }, 2000);</script>";
     }
 }
