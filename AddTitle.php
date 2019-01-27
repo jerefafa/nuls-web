@@ -138,12 +138,11 @@ else{
                         </div>
                         <div class="col s6">
                             <label>Subtype</label>
-                            <select name="subtype">
-                                <option selected value="">None</option>
+                            <select>
                                 <?php
                                 $stmt = $conn->query("SELECT * FROM `subtypes` WHERE `date_deleted` IS NULL");
                                 while ($row = $stmt->fetch_object()) {
-                                    if ($subtype == $row->subtype_id) {
+                                    if ($row->subtype == $row->subtype_id) {
                                         echo "<option value='" . $row->subtype_id . "' selected>" . $row->subtype . "</option>";
                                     } else {
                                         echo "<option value='" . $row->subtype_id . "'>" . $row->subtype . "</option>";
@@ -274,7 +273,7 @@ else{
                                 <?php
                                 $stmt = $conn->query("SELECT * FROM `subtypes` WHERE `date_deleted` IS NULL");
                                 while ($row = $stmt->fetch_object()) {
-                                    if ($subtype == $row->subtype_id) {
+                                    if ($obj->subtype_id == $row->subtype_id) {
                                         echo "<option value='" . $row->subtype_id . "' selected>" . $row->subtype . "</option>";
                                     } else {
                                         echo "<option value='" . $row->subtype_id . "'>" . $row->subtype . "</option>";
