@@ -2,7 +2,7 @@
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
 
-$conn = new mysqli("nuls-mysqldbserver.mysql.database.azure.com","nuls-user@nuls-mysqldbserver","National1","nuls");
+$conn =  new mysqli( "localhost", "nulsx10h_je", "Pithecus2013", "nulsx10h_nuls");
 $user = json_decode($_POST["user"]);
 
 if(mysqli_num_rows($conn->query("SELECT * FROM `users` WHERE `username` = '$user->username' OR `id_number` = '$user->id_num'")) == 0 ) {

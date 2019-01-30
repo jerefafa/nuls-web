@@ -9,7 +9,7 @@ header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
 $barcode = $_POST["barcode"];
 $user_id = $_POST["user_id"];
-$conn = new mysqli("nuls-mysqldbserver.mysql.database.azure.com","nuls-user@nuls-mysqldbserver","National1","nuls");
+$conn =  new mysqli( "localhost", "nulsx10h_je", "Pithecus2013", "nulsx10h_nuls");
 $stmt = $conn->query("SELECT * FROM `catalog` WHERE barcode = '".$barcode."'  AND date_deleted IS NULL ");
 while ($row = $stmt->fetch_object()){
     if($row->is_borrowed==1 || $row->is_missing==1){

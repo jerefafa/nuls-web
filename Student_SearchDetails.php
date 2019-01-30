@@ -39,7 +39,7 @@ require "connection.php";
             </ul>
         </div>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="Index.php">Library Search</a></li>
+            <li class="active"><a href="index.php">Library Search</a></li>
             <li class=""><a href="Login.html">Login</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>

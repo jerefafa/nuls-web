@@ -7,7 +7,7 @@
  */
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
-$conn = new mysqli("nuls-mysqldbserver.mysql.database.azure.com","nuls-user@nuls-mysqldbserver","National1","nuls");
+$conn =  new mysqli( "localhost", "nulsx10h_je", "Pithecus2013", "nulsx10h_nuls");
 $barcode = $_POST["barcode"];
 $lender_id = $_POST["lender_id"];
 $id_number = $_POST["id_num"];

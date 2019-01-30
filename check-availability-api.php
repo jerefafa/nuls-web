@@ -8,7 +8,7 @@
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
 $acnum = $_POST["book_id"];
-$conn = new mysqli("nuls-mysqldbserver.mysql.database.azure.com","nuls-user@nuls-mysqldbserver","National1","nuls");
+$conn =  new mysqli( "localhost", "nulsx10h_je", "Pithecus2013", "nulsx10h_nuls");
 $stmt = $conn->query("SELECT * FROM `catalog` WHERE acquisition_number = '".$acnum."' AND (is_missing = '0' AND is_borrowed = '0') AND date_deleted IS NULL");
 $numrows = mysqli_num_rows($stmt);
 if($numrows>0){

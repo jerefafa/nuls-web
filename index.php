@@ -32,7 +32,7 @@
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="Index.php">Library Search</a></li>
+            <li class="active"><a href="index.php">Library Search</a></li>
             <li><a href="Login.html">Login</a></li>
         </ul>
     </nav>

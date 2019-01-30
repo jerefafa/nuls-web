@@ -5,7 +5,7 @@ if(isset($_POST['username'])) {
     
     function Login()
     {
-        $conn = new mysqli("nuls-mysqldbserver.mysql.database.azure.com","nuls-user@nuls-mysqldbserver","National1","nuls");
+        $conn =  new mysqli( "localhost", "nulsx10h_je", "Pithecus2013", "nulsx10h_nuls");
         $username = $_POST["username"];
         $password = $_POST["password"];
         $sql = $conn->query("SELECT * FROM `librarians` WHERE  `email` = '".$username."' AND date_deleted IS NULL");

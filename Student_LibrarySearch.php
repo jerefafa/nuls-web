@@ -1,7 +1,7 @@
 <?php
 require "connection.php";
 if(!isset($_GET["wildcard"])){
-    header("Location:Index.php");
+    header("Location:index.php");
 
 }
 $keyword = $_GET['wildcard'];
@@ -38,7 +38,7 @@ $keyword = $_GET['wildcard'];
             </ul>
         </div>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="Index.php">Library Search</a></li>
+            <li class="active"><a href="index.php">Library Search</a></li>
             <li class=""><a href="Login.html">Login</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
@@ -53,7 +53,7 @@ $keyword = $_GET['wildcard'];
             ?>
             <script>
                 alert('Please Check Your Input | Only Allows Alphanumeric & Special Characters (e.g #,_, +, &, .)');
-                location.href="Index.php";
+                location.href="index.php";
             </script>
             <?php
         }

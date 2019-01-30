@@ -7,7 +7,7 @@
  */
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
-$conn = new mysqli("nuls-mysqldbserver.mysql.database.azure.com","nuls-user@nuls-mysqldbserver","National1","nuls");
+$conn =  new mysqli( "localhost", "nulsx10h_je", "Pithecus2013", "nulsx10h_nuls");
 $user_id=$_POST["user_id"];
 $stmt = $conn->query("SELECT `acquisition`.`title`,`catalog`.`barcode`,`circulation`.`date_borrowed` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `circulation` WHERE `circulation`.`borrower_id` ='".$user_id."' AND `circulation`.`barcode` = `catalog`.`barcode` AND `circulation`.`date_returned` IS NULL AND `acquisition`.`acquisition_number` = `catalog`.`acquisition_number`");
 $response = array();
