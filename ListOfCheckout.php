@@ -69,15 +69,49 @@ if(!isset($_GET["find"])){
                 if (isset($_GET["find"])) {
                     $ddvalue = $_GET["findwhat"];
                     if ($ddvalue == 1) {
-                        $sql = "SELECT * FROM `users` INNER JOIN `circulation` INNER JOIN `catalog` INNER JOIN `acquisition` INNER JOIN `courses` WHERE `users`.`course_id` = `courses`.`course_id` AND `circulation`.`borrower_id` = `users`.`user_id` AND `circulation`.`barcode` = `catalog`.`barcode`  AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND (`users`.`user_lname` LIKE '%".$_GET["find"]."%' OR `users`.`id_number` LIKE '%".$_GET["find"]."%')";
+                        $sql = "SELECT * FROM `users` INNER JOIN `courses` WHERE `users`.`course_id` = `courses`.`course_id` AND `user_lname` LIKE '%".$_GET["find"]."%' OR '%".$_GET["find"]."%' AND `date_deleted` IS NULL";
+                        $stmt = $conn->query($sql);
+                        while ($row = $stmt->fetch_object()){
+                            ?>
+                            <tr>
+                                <td>
+                                    <div style="margin-left: 25px">
+                                        Name: <?= $row->user_fname . ' ' . $row->user_lname?> <br>
+                                        ID Number: <?= $row->id_number ?><br>
+                                        Course: <?= $row->course ?> <br>
+                                        <div>
+                                            <span style="font-weight: bold">Borrowed Books: </span> <br>
+                                            <?php
+                                            $stmt2 = $conn->query("SELECT * FROM `circulation` INNER JOIN `catalog` INNER JOIN `acquisition` WHERE `circulation`.`barcode` = `catalog`.`barcode` AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND `circulation`.`borrower_id` = '$row->user_id'");
+                                            while ($row2 = $stmt2->fetch_object()) {
+                                                ?>
+                                                    <div>
+                                                        Title: <?=$row2->title?> <br>
+                                                        Barcode: <?=$row2->barcode?> <br>
+                                                        Date Borrowed: <?=date_format(date_create($row2->date_borrowed), 'M d Y')?> <hr>
+                                                    </div>
+                                                <?php
+                                            }
+                                            ?>
+                                            <div style="width: 100%; float: right" class="right-align">
+                                                <form action="Fines.php" method="get">
+                                                    <input type="hidden" name="id" value="<?=$row->user_id?>">
+                                                    <input type="submit" value="fines" class="btn" name="fines">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+
                     } else if ($ddvalue == 2) {
                         $title = $_GET["find"];
                         $sql = "SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`barcode`,`users`.`user_id`,`users`.`user_fname`,`users`.`user_lname`,`users`.`user_mname`,`users`.`id_number`,`courses`.`course_id`,`courses`.`course`,`circulation`.`date_borrowed`,`circulation`.`date_returned` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `circulation` INNER JOIN `users` INNER JOIN `courses` WHERE `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`barcode` = `circulation`.`barcode` AND `users`.`user_id` = `circulation`.`borrower_id` AND `courses`.`course_id` = `users`.`course_id` AND `acquisition`.`title` = '$title'";
-
-                    }
-                    if ($stmt = $conn->query($sql)) {;
-                        while ($row = $stmt->fetch_object()) {
-                            echo "<tr><td colspan='2'>
+                        if ($stmt = $conn->query($sql)) {;
+                            while ($row = $stmt->fetch_object()) {
+                                echo "<tr><td colspan='2'>
                     <div style=\"margin-left: 25px\">
                     Name :<b> " . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . " : " . $row->id_number . ")<br>                  
                     Program : <b>" . $row->course . "<br>
@@ -97,11 +131,13 @@ if(!isset($_GET["find"])){
                 </td>
                 </tr>";
 
+                            }
                         }
                     }
-                }
 
-            }
+                }
+                    }
+
             ?>
 
 
