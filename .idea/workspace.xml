@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListOfCheckout.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListOfCheckout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Checkin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Checkin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ListOfCheckout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="452">
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Checkin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+            <state relative-caret-position="187">
+              <caret line="79" column="742" selection-start-line="79" selection-start-column="742" selection-end-line="79" selection-end-column="742" />
             </state>
           </provider>
         </entry>
@@ -223,7 +223,6 @@
         <option value="$PROJECT_DIR$/select-courses-api.php" />
         <option value="$PROJECT_DIR$/user-borrow-search.php" />
         <option value="$PROJECT_DIR$/SearchTitle.php" />
-        <option value="$PROJECT_DIR$/Checkin.php" />
         <option value="$PROJECT_DIR$/Add_Subject.php" />
         <option value="$PROJECT_DIR$/Add_Supplier.php" />
         <option value="$PROJECT_DIR$/Add_MaterialType.php" />
@@ -236,6 +235,7 @@
         <option value="$PROJECT_DIR$/connection.php" />
         <option value="$PROJECT_DIR$/Fines.php" />
         <option value="$PROJECT_DIR$/ListOfCheckout.php" />
+        <option value="$PROJECT_DIR$/Checkin.php" />
       </list>
     </option>
   </component>
@@ -398,7 +398,7 @@
       <workItem from="1548554375469" duration="3114000" />
       <workItem from="1548860499447" duration="1406000" />
       <workItem from="1549000172710" duration="6442000" />
-      <workItem from="1549013467720" duration="2603000" />
+      <workItem from="1549013467720" duration="3074000" />
     </task>
     <servers />
   </component>
@@ -417,7 +417,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="530666000" />
+    <option name="totallyTimeSpent" value="531137000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Checkin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ListOfCopies.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -726,6 +719,13 @@
             <element signature="n#style#0;n#div#1;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#td#1;n#tr#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Checkin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="79" column="742" selection-start-line="79" selection-start-column="742" selection-end-line="79" selection-end-column="742" />
         </state>
       </provider>
     </entry>
