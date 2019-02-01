@@ -42,17 +42,17 @@ include "startup.php";
         <div class="row">
             <form class="col s12" method="post" action="supplier_add.php">
                 <div class="input-field col s3">
-                    <input id="supplier_name" type="text" class="validate" name="sname" pattern="[A-Za-z\s]{2,}">
+                    <input id="supplier_name" type="text" class="validate" name="sname" pattern="[A-Za-z\s]{2,}" required>
                     <label for="supplier_name">Supplier Name</label>
                 </div>
 
                 <div class="input-field col s3">
-                    <input id="contact_number" type="text" class="validate" name="number" pattern="[0-9]{5,}" title="This only accepts numeric value">
+                    <input id="contact_number" type="text" class="validate" name="number" pattern="[0-9]{5,}" title="This only accepts numeric value" required>
                     <label for="contact_number">Contact Number</label>
                 </div>
 
                 <div class="input-field col s3">
-                    <input id="contact_person" type="text" class="validate" name="person" pattern="[A-Za-z\s]{2,}">
+                    <input id="contact_person" type="text" class="validate" name="person" pattern="[A-Za-z\s]{2,}" required>
                     <label for="contact_person">Contact Person</label>
                 </div>
 

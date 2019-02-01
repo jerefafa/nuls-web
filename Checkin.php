@@ -44,7 +44,7 @@ include "startup.php";
                     <div class="col s12">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">search</i>
-                            <input id="icon_prefix" type="text" class="validate" name = "booktitle" pattern="[a-zA-Z0-9#_.+&(),\-\s]*$  ">
+                            <input id="icon_prefix" type="text" class="validate" name = "booktitle" pattern="[a-zA-Z0-9#_.+&(),\-\s]*$">
                             <label for="icon_prefix">Find copy</label>
                         </div>
 

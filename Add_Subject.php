@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query);
         <div class="row">
             <form class="col s12" method="post" action="subject_add.php">
                 <div class="input-field col s4">
-                    <input id="subject_name" type="text" name="subject" class="validate" pattern="[A-Za-z\s]{3,}">
+                    <input id="subject_name" type="text" name="subject" class="validate" pattern="[A-Za-z\s]{3,}" required>
                     <label for="subject_name">Subject Name</label>
                 </div>
 

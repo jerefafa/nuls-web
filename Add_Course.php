@@ -46,13 +46,13 @@ $result = mysqli_query($conn, $query);
         <div class="row">
             <form class="col s12" method="post" action="course_add.php">
                 <div class="input-field col s4">
-                    <input id="course" type="text" name="course" class="validate"">
-                    <label for="course">Course</label>
+                    <input id="course" type="text" name="course" class="validate"" required>
+                    <label for="course">Program</label>
                 </div>
 
                 <div class="input-field col s4">
                     <select required  name="program">
-                        <option value="" disabled selected>Program</option>
+                        <option value="" disabled selected>College</option>
                         <?php while($row1 = mysqli_fetch_array($result)):;?>
                             <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
                         <?php endwhile;?>

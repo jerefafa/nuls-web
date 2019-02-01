@@ -53,7 +53,7 @@ include "startup.php";
                         </div>
 
                         <div class="col s6" style="margin-top: 10px">
-                            <input type="submit" class="waves-effect waves-light btn" style="margin-top: 1%" value="GO!" name="go">
+                            <input type="submit" class="waves-effect waves-light btn" style="margin-top: 1%" value="GO!" name="go" pattern="[a-zA-Z0-9#_.+&(),\-\s]*$">
                         </div>
                     </div>
                     <div class="col s12">

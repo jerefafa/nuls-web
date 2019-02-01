@@ -1,3 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script>
+        function showPrompt() {
+            swal({
+                title: "Do you really want to logout?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+                showCancelButton: true
+            }, function (isLogout) {
+                if(isLogout) {
+                    location.href = "index.php";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
 <div id="menu">
     <ul id="slide-out" class="side-nav fixed sidebar-background">
         <li class="sidebar-header user-view">
@@ -75,8 +97,10 @@
 
         >
             <a href="Assets.php"><i class="material-icons">web_asset</i>Assets</a></li>
-        <li><a href="login.php"><i class="material-icons">exit_to_app</i>Logout</a>
+        <li><a onclick="showPrompt()"><i class="material-icons">exit_to_app</i>Logout</a>
         </li>
 
     </ul>
 </div>
+</body>
+</html>

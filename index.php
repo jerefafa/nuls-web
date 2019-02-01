@@ -41,8 +41,8 @@
         <div class="valign-wrapper row">
             <div class="col s12 pull-s1 m6 pull-m3 l6 pull-l4">
                 <div class="input-field col s12 white">
-                    <input  href="Student_LibrarySearch.php" class="prefix material-icons" value="search" type="submit" style="border: 0px;background: transparent;float: left;margin-top: 2.5%;margin-right: 50%">
-                    <input id="search" placeholder="Search" type="text" class="validate" name="wildcard">
+                    <input class="prefix material-icons" value="search" type="submit" style="border: 0px;background: transparent;float: left;margin-top: 2.5%;margin-right: 50%">
+                    <input id="search" placeholder="Search" type="text" class="validate" name="wildcard" required>
 
                 </div>
                 <div class="col s12 pull-s1 m6 pull-m3 l6 pull-l4" style="width: 104.5%;margin-left: 31%">

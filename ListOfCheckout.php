@@ -69,17 +69,15 @@ if(!isset($_GET["find"])){
                 if (isset($_GET["find"])) {
                     $ddvalue = $_GET["findwhat"];
                     if ($ddvalue == 1) {
-                        $sql = "SELECT * FROM `users` INNER JOIN `courses` ON `users`.`course_id` = `courses`.`course_id` INNER JOIN `programs` ON `courses`.`program_id` = `programs`.`program_id`INNER JOIN `circulation` ON `users`.`user_id` = `circulation`.`borrower_id` INNER JOIN `catalog` ON `circulation`.`barcode` = `catalog`.`barcode` INNER JOIN `acquisition` ON `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` INNER JOIN `fines` ON `fines`.`circulation_id` = `circulation`.`circulation_id` WHERE `id_number` LIKE '%" . $_GET["find"] . "%' OR `user_lname` LIKE '%" . $_GET["find"] . "%'";
+                        $sql = "SELECT * FROM `users` INNER JOIN `circulation` INNER JOIN `catalog` INNER JOIN `acquisition` INNER JOIN `courses` WHERE `users`.`course_id` = `courses`.`course_id` AND `circulation`.`borrower_id` = `users`.`user_id` AND `circulation`.`barcode` = `catalog`.`barcode`  AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND (`users`.`user_lname` LIKE '%".$_GET["find"]."%' OR `users`.`id_number` LIKE '%".$_GET["find"]."%')";
                     } else if ($ddvalue == 2) {
                         $title = $_GET["find"];
                         $sql = "SELECT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`catalog`.`barcode`,`users`.`user_id`,`users`.`user_fname`,`users`.`user_lname`,`users`.`user_mname`,`users`.`id_number`,`courses`.`course_id`,`courses`.`course`,`circulation`.`date_borrowed`,`circulation`.`date_returned` FROM `acquisition` INNER JOIN `catalog` INNER JOIN `circulation` INNER JOIN `users` INNER JOIN `courses` WHERE `acquisition`.`acquisition_number` = `catalog`.`acquisition_number` AND `catalog`.`barcode` = `circulation`.`barcode` AND `users`.`user_id` = `circulation`.`borrower_id` AND `courses`.`course_id` = `users`.`course_id` AND `acquisition`.`title` = '$title'";
 
                     }
-                }
-                if ($stmt = $conn->query($sql)) {
-
-                    while ($row = $stmt->fetch_object()) {
-                        echo "<tr><td colspan='2'>
+                    if ($stmt = $conn->query($sql)) {;
+                        while ($row = $stmt->fetch_object()) {
+                            echo "<tr><td colspan='2'>
                     <div style=\"margin-left: 25px\">
                     Name :<b> " . $row->user_lname . ", " . $row->user_fname . " " . $row->user_mname . "</b> (" . $row->course . " : " . $row->id_number . ")<br>                  
                     Program : <b>" . $row->course . "<br>
@@ -93,16 +91,16 @@ if(!isset($_GET["find"])){
                    <td>
                    <input type='hidden' value='$row->user_id' name='id'>
                      <input type=\"submit\" class=\"waves-effect waves-light btn\" style=\"margin-top: 1%\" value=\"FINES\" name=\"fines\">
-                    <b>Library: </b> PHP ".$row->amount." <br>
                     <br><br>
+                      
 
                 </td>
                 </tr>";
 
+                        }
                     }
-                } else {
-                    echo $conn->error;
                 }
+
             }
             ?>
 
