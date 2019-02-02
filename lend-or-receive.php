@@ -51,17 +51,37 @@ if(isset($_POST['lendButton'])){
 </script>";
     }
 } elseif (isset($_POST["receiveButton"])) {
-    if($conn->query("UPDATE `circulation` SET `date_returned` = '".date('Y-m-d')."', `receiver_id` = '".$_SESSION["user_id"]."'")) {
-        echo "<script>swal('','Book Received Successfully','success')
+    $barcode = $_POST["barcode"];
+    if(!mysqli_num_rows($conn->query("SELECT * FROM `catalog` WHERE `barcode` = '$barcode' AND `date_deleted` IS NULL"))) {
+        echo "<script>
+        swal('','Book does not belong in the library', 'error');
+        setTimeout(() => {
+            window.history.back();
+        },2000);
+</script>";
+    }
+    else {
+        $stmt = $conn->query("SELECT * FROM `circulation` INNER JOIN `fines` WHERE `fines`.`circulation_id` = `circulation`.`circulation_id` AND `circulation`.`barcode` = '" . $barcode . "' AND `fines`.`is_paid` = '0'");
+        if (!mysqli_num_rows($stmt)) {
+            if ($conn->query("UPDATE `circulation` SET `date_returned` = '" . date('Y-m-d') . "', `receiver_id` = '" . $_SESSION["user_id"] . "' WHERE `barcode` = '$barcode'")) {
+                echo "<script>swal('','Book Received Successfully','success')
         setInterval(() => {
             window.history.back();
         },2000);
 </script>";
-    } else {
-        echo "<script>swal('','Book Receiving Failed','error')
+            } else {
+                echo "<script>swal('','Book Receiving Failed','error')
         setInterval(() => {
             window.history.back();
         },2000);
 </script>";
+            }
+        } else {
+            echo "<script>swal('','Book still have fines','error')
+        setInterval(() => {
+            window.history.back();
+        },2000);
+</script>";
+        }
     }
 }

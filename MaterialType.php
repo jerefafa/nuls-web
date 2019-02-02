@@ -77,9 +77,15 @@ include "startup.php";
             $ctr = mysqli_num_rows($stmt);
             $page = $ctr/10;
             $page = ceil($page);
+            ?>
+            <div class="right-align" style="margin-right: 25px">
+            <?php
             for($b=1; $b<=$page; $b++){
                 ?> <a href="MaterialType.php?page=<?php echo $b;?>"><?php echo $b.' '?></a>  <?php
             }
+            ?>
+            </div>
+            <?php
             $a = 1;
             if(isset($_GET["page"])) {
                 $a = $_GET["page"];

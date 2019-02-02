@@ -16,7 +16,7 @@ include "startup.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script>
-        function showPrompt(title, formId) {
+        function saveCirculation(title, formId) {
             swal({
                 title: "Are you sure you want to update circulation #"+title+"?",
                 icon: "warning",
@@ -136,7 +136,7 @@ include "startup.php";
                         <input type='hidden' value='$row->amount' name='amount'>
                         <input type='hidden' value='$row->fine_note' name='note'>
                         <input type='hidden' name='save' value='1'>
-                        <button onclick='showPrompt(`".$row->circulation_id."`,".$row->circulation_id.")' type='button' class=\"waves-effect waves-light btn\" href=\"#\" style=\" margin-left: 8%\" name='save'>Save</button>
+                        <button onclick='saveCirculation(`".$row->circulation_id."`,".$row->circulation_id.")' type='button' class=\"waves-effect waves-light btn\" href=\"#\" style=\" margin-left: 8%\" name='save'>Save</button>
                         </form>
                         <form action='update_fines.php' method='post' id='".$row->circulation_id."paid'>
                         <input type='hidden' value='$row->circulation_id' name='id'>

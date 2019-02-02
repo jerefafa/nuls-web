@@ -31,8 +31,10 @@ if(!isset($_GET["find"])){
         <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="Checkout.php">Checkout</a></li>
-            <li class=""><a href="Checkin.php">Checkin</a></li>
+            <li class="active"><a href="Checkout.php">Check out</a></li>
+            <li class=""><a href="Checkin.php">Check in</a></li>
+            <li><a href="Lend.php">Lend</a></li>
+            <li><a href="Receive.php">Receive</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
@@ -82,7 +84,7 @@ if(!isset($_GET["find"])){
                                         <div>
                                             <span style="font-weight: bold">Borrowed Books: </span> <br>
                                             <?php
-                                            $stmt2 = $conn->query("SELECT * FROM `circulation` INNER JOIN `catalog` INNER JOIN `acquisition` WHERE `circulation`.`barcode` = `catalog`.`barcode` AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND `circulation`.`borrower_id` = '$row->user_id'");
+                                            $stmt2 = $conn->query("SELECT * FROM `circulation` INNER JOIN `catalog` INNER JOIN `acquisition` WHERE `circulation`.`barcode` = `catalog`.`barcode` AND `catalog`.`acquisition_number` = `acquisition`.`acquisition_number` AND `circulation`.`borrower_id` = '$row->user_id' AND `circulation`.`date_returned` IS NULL");
                                             while ($row2 = $stmt2->fetch_object()) {
                                                 ?>
                                                     <div>

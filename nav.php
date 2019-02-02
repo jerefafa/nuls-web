@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script>
-        function showPrompt() {
+        function showLogout() {
             swal({
                 title: "Do you really want to logout?",
                 icon: "warning",
@@ -97,7 +97,7 @@
 
         >
             <a href="Assets.php"><i class="material-icons">web_asset</i>Assets</a></li>
-        <li><a onclick="showPrompt()"><i class="material-icons">exit_to_app</i>Logout</a>
+        <li><a onclick="showLogout()"><i class="material-icons">exit_to_app</i>Logout</a>
         </li>
 
     </ul>
