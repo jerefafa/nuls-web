@@ -9,29 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="56222dde-4aa2-476b-8f23-5ec6f4c8870e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acquisition_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Acquisition_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddCopies.php" beforeDir="false" afterPath="$PROJECT_DIR$/AddCopies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddTitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/AddTitle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_Subject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Add_User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Catalog_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circulation_Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Circulation_Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListOfCheckout.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListOfCheckout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListOfCopies.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListOfCopies.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Student_LibrarySearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/Student_LibrarySearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UpdateCatalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/UpdateCatalog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagementList.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagementList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement_Add.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement_Add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement_Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement_Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuls-web.zip" beforeDir="false" afterPath="$PROJECT_DIR$/nuls-web.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subject_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/subject_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuls-web.zip" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,33 +39,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UpdateCatalog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Receive.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Checkout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ListOfCheckout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="148">
@@ -95,10 +48,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Student_LibrarySearch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="60" column="191" lean-forward="true" selection-start-line="60" selection-start-column="191" selection-end-line="60" selection-end-column="191" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Inventory.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
-              <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="24" />
+              <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -159,7 +142,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Add_Subject.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="172">
@@ -181,9 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sear</find>
-      <find>middle</find>
-      <find>ema</find>
       <find>email</find>
       <find>emai</find>
       <find>form</find>
@@ -211,6 +191,9 @@
       <find>quan</find>
       <find>.da</find>
       <find>se</find>
+      <find>subty</find>
+      <find>cata</find>
+      <find>mater</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -247,9 +230,6 @@
         <option value="$PROJECT_DIR$/Program.php" />
         <option value="$PROJECT_DIR$/Courses.php" />
         <option value="$PROJECT_DIR$/Users.php" />
-        <option value="$PROJECT_DIR$/connection.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Student_LibrarySearch.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/nav.php" />
         <option value="$PROJECT_DIR$/UserManagement_Update.php" />
@@ -270,6 +250,9 @@
         <option value="$PROJECT_DIR$/Acquisition_Report.php" />
         <option value="$PROJECT_DIR$/subject_add.php" />
         <option value="$PROJECT_DIR$/Add_Subject.php" />
+        <option value="$PROJECT_DIR$/connection.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Student_LibrarySearch.php" />
       </list>
     </option>
   </component>
@@ -434,7 +417,7 @@
       <workItem from="1549000172710" duration="6442000" />
       <workItem from="1549013467720" duration="3154000" />
       <workItem from="1549075124335" duration="3001000" />
-      <workItem from="1549181739659" duration="11961000" />
+      <workItem from="1549181739659" duration="15700000" />
     </task>
     <servers />
   </component>
@@ -453,7 +436,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="546179000" />
+    <option name="totallyTimeSpent" value="549918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,30 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Student_LibrarySearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="60" column="692" selection-start-line="60" selection-start-column="692" selection-end-line="60" selection-end-column="692" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
@@ -777,14 +736,14 @@
     <entry file="file://$PROJECT_DIR$/Receive.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
-          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Checkout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
-          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -798,7 +757,7 @@
     <entry file="file://$PROJECT_DIR$/Inventory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="24" />
+          <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -854,6 +813,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Student_LibrarySearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="60" column="191" lean-forward="true" selection-start-line="60" selection-start-column="191" selection-end-line="60" selection-end-column="191" />
         </state>
       </provider>
     </entry>
