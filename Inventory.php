@@ -170,6 +170,7 @@ include "startup.php";
         clear: 'Clear',
         close: 'Ok',
         format: 'mmm dd yyyy',
+        max: new Date(),
         closeOnSelect: false // Close upon selecting a date,
     });
 </script>

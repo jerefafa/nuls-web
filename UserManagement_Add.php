@@ -20,11 +20,10 @@ if(isset($_POST['registerAdmin'])){
     $lib_fname = $_POST['fname'];
     $lib_gender = $_POST['gender'];
     $lib_bday = date_create($_POST['birthdate']);
-    $lib_email = $_POST['email'];
+    $lib_email = $_POST['email'].'@national-u.edu.ph';
     $lib_password = $_POST['password'];
     $lib_fpassword = $_POST['fpassword'];
     $lib_position = $_POST['position'];
-    $lib_access = $_POST['access'];
     $date = date_format($lib_bday,"Y-m-d");
 
 
@@ -59,33 +58,34 @@ if(isset($_POST['registerAdmin'])){
         }, 2000);</script>";
     }
 //Insert Librarian
-    else
+    else {
 
 //password hashing
         $hash = password_hash($lib_fpassword, PASSWORD_DEFAULT);
 
-    $stmt2  = $conn->query("INSERT INTO `librarians` (lname, mname, fname, gender, birthdate, email, password, `position`, date_deleted) VALUES ('$lib_lname', '$lib_mname', '$lib_fname', '$lib_gender', '$date' , '$lib_email', '$hash', '$lib_position', NULL)");
-    $id = $conn->insert_id;
+        $stmt2 = $conn->query("INSERT INTO `librarians` (lname, mname, fname, gender, birthdate, email, password, `position`, date_deleted) VALUES ('$lib_lname', '$lib_mname', '$lib_fname', '$lib_gender', '$date' , '$lib_email', '$hash', '$lib_position', NULL)");
+        $id = $conn->insert_id;
 
-
-    if(!empty($_POST['access'])){
-        $accesses = $_POST['access'];
-        foreach ($accesses as $acc){
-            $stmt3 = $conn->query("INSERT INTO `access_levels`(librarian_id,access_level) VALUES('$id','".$acc."')");
+        error_reporting(0);
+        if (!empty($_POST['access'])) {
+            $accesses = $_POST['access'];
+            foreach ($accesses as $acc) {
+                $stmt3 = $conn->query("INSERT INTO `access_levels`(librarian_id,access_level) VALUES('$id','" . $acc . "')");
+            }
         }
-    }
 
-    /**if(!empty($_POST['access'])){
-    $accesses = $_POST['access'];
-    foreach ($accesses as $acc){
-    $stmt3 = $conn->query("INSERT INTO `access_levels`(librarian_id,access_level) VALUES('".$last_id."','".$acc."')");
-    }
-    }**/
-    if($stmt2){
-        echo "<script>swal('','Librarian Registered Successfully','success');
+        /**if(!empty($_POST['access'])){
+         * $accesses = $_POST['access'];
+         * foreach ($accesses as $acc){
+         * $stmt3 = $conn->query("INSERT INTO `access_levels`(librarian_id,access_level) VALUES('".$last_id."','".$acc."')");
+         * }
+         * }**/
+        if ($stmt2) {
+            echo "<script>swal('','Librarian Registered Successfully','success');
         setInterval(() => {
                         window.history.go(-2);
         }, 2000);</script>";
+        }
     }
 }
 

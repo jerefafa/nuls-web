@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query);
                 </div>
 
                 <div class="input-field col s4">
-                    <input required id="middlename" type="text" class="validate" name="mname" pattern="[A-Za-z\s]{2,}">
+                    <input id="middlename" type="text" class="validate" name="mname" pattern="[A-Za-z\s]{2,}">
                     <label for="middlename">Middle Name</label>
                 </div>
 
@@ -63,8 +63,8 @@ $result = mysqli_query($conn, $query);
                     <label for="idnum">ID Number</label>
                 </div>
                 <div class="input-field col s4">
-                    <input required id="uname" type="email" class="validate"name="uname">
-                    <label for="uname">Username</label>
+                    <input required id="uname" type="text" class="validate"name="uname" pattern="[a-z]{3,}">
+                    <label for="uname">NU Email</label>
                 </div>
 
                 <div class="input-field col s4">

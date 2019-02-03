@@ -13,7 +13,7 @@
                 showCancelButton: true
             }, function (isLogout) {
                 if(isLogout) {
-                    location.href = "index.php";
+                    location.href = "login.php";
                 }
             });
         }

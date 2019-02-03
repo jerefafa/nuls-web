@@ -63,8 +63,8 @@ include "startup.php";
                 </div>
 
                 <div class="input-field col s5">
-                    <input required id="Email" type="text" class="validate" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                    <label class="active center" for="Email">Email</label>
+                    <input required id="text" pattern="[a-z]{3,}" type="text" class="validate" name="email" title="NU email without @national-u.edu.ph">
+                    <label class="active center" for="Email">NU Email</label>
                 </div>
 
                 <div class="input-field col s4">
@@ -126,6 +126,8 @@ include "startup.php";
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="MaterializeCSS/materialize/js/materialize.min.js"></script>
 <script>
+    var date = new Date();
+    date.setFullYear(date.getFullYear()- 18);
     $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 300
             edge: 'left', // Choose the horizontal origin
@@ -145,12 +147,13 @@ include "startup.php";
     });
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        selectYears: 50, // Creates a dropdown of 15 years to control year,
         today: 'Today',
         clear: 'Clear',
             close: 'Ok',
             format: 'mmm dd yyyy',
-        closeOnSelect: false // Close upon selecting a date,
+        closeOnSelect: false, // Close upon selecting a date,
+        max: date
     });
   /**  function check(){
         var check;

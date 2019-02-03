@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query);
                 </div>
 
                 <div class="input-field col s4">
-                    <select required  name="program">
+                    <select required  name="program" class="validate">
                         <option value="" disabled selected>College</option>
                         <?php while($row1 = mysqli_fetch_array($result)):;?>
                         <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>

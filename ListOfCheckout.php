@@ -73,6 +73,9 @@ if(!isset($_GET["find"])){
                     if ($ddvalue == 1) {
                         $sql = "SELECT * FROM `users` INNER JOIN `courses` WHERE `users`.`course_id` = `courses`.`course_id` AND `user_lname` LIKE '%".$_GET["find"]."%' OR '%".$_GET["find"]."%' AND `date_deleted` IS NULL";
                         $stmt = $conn->query($sql);
+                        if(mysqli_num_rows($stmt) < 1) {
+                            echo "<script>swal('','No Results Found', 'info')</script>";
+                        }
                         while ($row = $stmt->fetch_object()){
                             ?>
                             <tr>

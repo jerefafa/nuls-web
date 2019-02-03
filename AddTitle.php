@@ -115,7 +115,7 @@ else{
                         </div>
                         <div class="input-field  col s4">
 
-                            <input type="text" name="call_number" id="callnumber">
+                            <input type="text" name="call_number" id="callnumber" required pattern="^[0-9-,.]*$" class="validate">
                             <label for="callnumber">Call Number</label>
 
                         </div>

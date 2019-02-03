@@ -53,7 +53,7 @@ if(isset($_GET['librarian_id'])){
                 </div>
 
                 <div class="input-field col s4">
-                    <input required id="MiddleName" type="text" class="validate" name="mname" value="<?php echo $mname ?>" pattern="[A-Za-z\s]{2,}">
+                    <input id="MiddleName" type="text" class="validate" name="mname" value="<?php echo $mname ?>" pattern="[A-Za-z\s]{2,}">
                     <label class="active center" for="MiddleName">Middle Name</label>
                 </div>
 

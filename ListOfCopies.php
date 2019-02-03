@@ -55,7 +55,7 @@ error_reporting(0);
 
                 <form action="ListOfCopies.php" method="get">
                     <div class="col s8">
-                <input type="text" name="search">
+                <input type="text" name="search" placeholder="Search for Author, Title, or Subject">
                     </div>
                     <div  class="col s4"> <input type="submit" value="search" name="searchButton" class="material-icons btn-floating" style="border:0px;font-size: x-large;color:white"></div>
                 </form>
@@ -88,7 +88,7 @@ error_reporting(0);
                 $sql = "";
                 if (isset($_GET["searchButton"])) {
                     $keyword = $_GET["search"];
-                    $sql = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE (`acquisition`.`title`='$keyword' OR `programs`.`program`='$keyword' OR `subjects`.`subject_name`='$keyword' OR `acquisition`.`author` = '$keyword') AND `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
+                    $sql = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE (`acquisition`.`title` LIKE '%$keyword%' OR `programs`.`program`LIKE '%$keyword%' OR `subjects`.`subject_name` LIKE '%$keyword%' OR `acquisition`.`author` = '$keyword') AND `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
                 } else {
                     $sql = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
                 }
@@ -98,7 +98,7 @@ error_reporting(0);
                 if (!isset($_GET["search"])) {
                     $sql2 = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
                 } else {
-                    $sql2 = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE (`acquisition`.`title`='$keyword' OR `programs`.`program`='$keyword' OR `subjects`.`subject_name`='$keyword' OR `acquisition`.`author` = '$keyword') AND `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
+                    $sql2 = "SELECT `acquisition`.`acquisition_number`,`programs`.`program`,`subjects`.`subject_name`,`acquisition`.`author`,`acquisition`.`title`,`acquisition`.`edition` FROM `acquisition` INNER JOIN `programs` INNER JOIN `subjects` WHERE (`acquisition`.`title` LIKE '%$keyword%' OR `programs`.`program` LIKE '%$keyword%' OR `subjects`.`subject_name` LIKE '%$keyword%' OR `acquisition`.`author` LIKE '%$keyword%') AND `programs`.`program_id` = `acquisition`.`program_id` AND `subjects`.`subject_id` = `acquisition`.`subject_id` AND `acquisition`.`date_deleted` IS NULL ORDER BY `title`";
 
                 }
                 $stmt2 = $conn->query($sql2);

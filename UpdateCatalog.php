@@ -1,3 +1,9 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+</head>
+</html>
 <?php
 /**
  * Created by PhpStorm.
@@ -19,13 +25,17 @@ else{
     }
    if($stmt = $conn->query($sql)){
        echo "<script>
-                alert('Successfully Updated');
-                window.history.go(-2);
+                swal('','Successfully Updated','success');
+                setTimeout(() => {
+                                    window.history.go(-2);                    
+                }, 2000)
             </script>";
    }else{
        echo "<script>
-                alert('Barcode should be unique');
-                window.history.back();
+                swal('','Barcode should be unique','error');
+                setTimeout(() => {
+                window.history.back();                    
+                }, 2000);
             </script>";
    }
 }

@@ -19,7 +19,6 @@ if(isset($_POST["username"])){
     $email = mysqli_real_escape_string($conn,$_POST['username']);
     $password = mysqli_real_escape_string($conn,$_POST['password']);
 
-
     $stmt = $conn->query("SELECT librarian_id, password FROM  `librarians` WHERE email = '".$email."'");
     if($stmt->num_rows > 0){
         $data = $stmt->fetch_array();

@@ -24,7 +24,7 @@ if(isset($_POST['asubject'])){
     if(mysqli_num_rows($run_query)>0) {
         echo "<script>swal('','Subject Already Taken.','error');
         setInterval(() => {
-            location.href='Add_Subject.php';
+            window.history.back();
         }, 2000);</script>";
     }
 
@@ -36,7 +36,8 @@ setInterval(() => {
         }, 2000);</script>";
     }
     else{
-        echo "<script>swal('','Error Adding the Subject','error')setInterval(() => {
+        echo "<script>swal('','Error Adding the Subject','error');
+setInterval(() => {
             window.history.go(-2);
         }, 2000);</script>";
     }

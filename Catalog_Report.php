@@ -144,6 +144,7 @@ include "startup.php";
         today: 'Today',
         clear: 'Clear',
         close: 'Ok',
+        max: new Date(),
         format: 'mmm dd yyyy',
         closeOnSelect: false // Close upon selecting a date,
     });

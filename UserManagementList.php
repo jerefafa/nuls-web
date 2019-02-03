@@ -69,7 +69,7 @@ include "startup.php";
             <tbody>
             <?php
                 require "connection.php";
-                $stmt  = $conn->query("SELECT * FROM `librarians` WHERE `position`!='Chief Librarian' AND `position`!='Super Admin' AND `date_deleted` IS NULL");
+                $stmt  = $conn->query("SELECT * FROM `librarians` WHERE `position`!='Super Admin' AND `date_deleted` IS NULL");
             $ctr = mysqli_num_rows($stmt);
             $page = $ctr/10;
             $page = ceil($page);
@@ -92,7 +92,7 @@ include "startup.php";
             else {
                 $page1=($a*10)-10;
             }
-            $stmt2  = $conn->query("SELECT * FROM `librarians` WHERE `position`!='Chief Librarian' AND `position`!='Super Admin' AND `date_deleted` IS NULL LIMIT $page1, 10");
+            $stmt2  = $conn->query("SELECT * FROM `librarians` WHERE  `position`!='Super Admin' AND `date_deleted` IS NULL LIMIT $page1, 10");
 
             while ($row = $stmt2->fetch_object()){
                     echo "<tr><td>".$row->fname." ". $row->lname."</td> <td>".$row->position."</td> <td style='display: flex'><form action='UserManagement_Update.php' method='get'><input type='hidden' value='".$row->librarian_id. "' name='librarian_id'>

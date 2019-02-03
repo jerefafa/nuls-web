@@ -57,17 +57,17 @@ include "startup.php";
             </div>
 
             <div class="col s3 input-field">
-                    <input id="author" type="text" class="validate" name="author" pattern="[A-Za-z\-\s\.]{2,}" required>
+                    <input id="author" type="text" class="validate" name="author" pattern="[A-Za-z\-\s\.\d,]{2,}" required>
                 <label for="author">Author</label>
             </div>
 
             <div class="col s3 input-field">
-                <input id="title" type="text" class="validate" name="title" pattern="[A-Za-z0-9#&*()+,\s\.]{2,}" required>
+                <input id="title" type="text" class="validate" name="title" pattern="[A-Za-z0-9#&*()+,\s\./-,:]{2,}" required>
                 <label for="title">Title</label>
             </div>
 
             <div class="col s2 input-field">
-                <input id="edition" type="text" class="validate" name="edition" pattern="[1-9]{1,}" required>
+                <input id="edition" type="text" class="validate" name="edition" pattern="[1-9]{1,2}" required>
                 <label for="edition">Edition</label>
             </div>
 
@@ -97,7 +97,7 @@ include "startup.php";
             </div>
 
             <div class="col s2 input-field">
-                <input id="qty" type="number" class="validate" name="quantity" pattern="[0-9]{1,}" required>
+                <input id="qty" type="number" class="validate" name="quantity" min="1" max="99" pattern="[0-9]{1,2}" required>
                 <label for="qty">Quantity</label>
             </div>
 
@@ -131,7 +131,10 @@ include "startup.php";
             </div>
 
             <div class="col s4 input-field">
-                <input id="nfj" type="text" class="validate" name="lrcNeedForJustification" pattern="[(YES|NO)]{2,}" required title="Enter only YES or NO">
+                <select name="lrcNeedForJustification" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
                 <label for="nfj">Need for Justification</label>
             </div>
 
@@ -243,7 +246,8 @@ include "startup.php";
         clear: 'Clear',
         close: 'Ok',
         format: 'mmm dd yyyy',
-        closeOnSelect: true // Close upon selecting a date,
+        closeOnSelect: true, // Close upon selecting a date,
+        max: new Date()
     });
     $(document).ready(function(){
         $("#program").change(function () {

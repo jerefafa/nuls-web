@@ -17,10 +17,11 @@ if(isset($_POST['addUser'])){
     $mname = $_POST['mname'];
     $lname = $_POST['lname'];
     $idnum = $_POST['idnum'];
-    $uname = $_POST['uname'];
+    $utype = $_POST['utype'];
+    $prefix = $utype == 'Student'? '@students.national-u.edu.ph' : '@national-u.edu.ph';
+    $uname = $_POST['uname'].$prefix;
     $password = $_POST['password'];
     $fpassword = $_POST['fpassword'];
-    $utype = $_POST['utype'];
     $program = $_POST['program'];
 
     //Check User
