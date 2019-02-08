@@ -23,8 +23,8 @@
 <div id="menu">
     <ul id="slide-out" class="side-nav fixed sidebar-background">
         <li class="sidebar-header user-view">
-            <img class="circle center-block" src="Images/NULOGO.png">
-            <p class="center">National University <br> Learning Resource Center</p>
+            <img class="center-block" src="Images/Icon%20Ver%202.1.png" style="width: 25%; height: 25%; margin-bottom: 10%">
+            <h6 class="center" style="margin-bottom: 10%">National University Learning Resource Center</h6>
         </li>
 
         <li><a href="Home.php"><i class="material-icons">home</i>Home</a></a></li>

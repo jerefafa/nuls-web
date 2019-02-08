@@ -54,7 +54,7 @@ include "startup.php";
             </div>
         </form>
 
-        <table class="highlight grey lighten-2">
+        <table class="responsive-table grey lighten-2">
             <thead>
             <th>Book Title</th>
             <th>Author</th>

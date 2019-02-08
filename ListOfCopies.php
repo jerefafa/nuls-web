@@ -54,10 +54,11 @@ error_reporting(0);
         <div class="row">
 
                 <form action="ListOfCopies.php" method="get">
-                    <div class="col s8">
-                <input type="text" name="search" placeholder="Search for Author, Title, or Subject">
+                    <div class="input-field col s4">
+                        <input id="searchHere" type="text" name="search">
+                        <label for="searchHere">Search for Author, Title, or Subject</label>
                     </div>
-                    <div  class="col s4"> <input type="submit" value="search" name="searchButton" class="material-icons btn-floating" style="border:0px;font-size: x-large;color:white"></div>
+                    <div  class="col s4"> <input type="submit" value="search" name="searchButton" class="material-icons btn-floating" style="border:0px;font-size: x-large;color:white; margin-top: 6%"></div>
                 </form>
             </div>
 

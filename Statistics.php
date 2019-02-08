@@ -66,7 +66,7 @@ include "startup.php";
             </div>
             <div class="col s2">
                <!-- <a class="waves-effect waves-light btn active" style="margin-top: 11%" href="">Go!</a>-->
-               <button type="submit" class="waves-effect waves-light btn active" style="margin-top: 11%" type="submit" value="search" name="goBtn">GO!</button>
+               <button type="submit" class="waves-effect waves-light btn active" style="margin-top: 17%" type="submit" value="search" name="goBtn">GO!</button>
             </div>
         </div>
         </form>

@@ -20,6 +20,9 @@ include "startup.php";
 
 <div id="container">
     <nav class="nav-background">
+        <?php
+        include "nav.php";
+        ?>
         <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -28,25 +31,23 @@ include "startup.php";
         </ul>
     </nav>
     <div id="content">
-        <?php
-        include "nav.php";
-        ?>
+
+
         <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
         <form action="LibrarySearch.php" method="get">
         <div class="valign-wrapper row">
 
             <div class="col s10 pull-s1 m6 pull-m3 l6 pull-l4">
                 <div class="input-field col s12 white">
-                    <input id="search" placeholder="Search" type="text" class="validate" name="title">
-                    <div class="col s12 pull-s1 m6 pull-m3 l6 pull-l4" style="width: 104.5%;margin-left: 31%">
-
+                    <div class="input-field col s10">
+                        <input id="search" type="text" class="validate" name="title">
+                        <label for="search">Search</label>
                     </div>
-                    <input type="submit" class="suffix btn darken-2"  style="border:0px;color:white;font-size:medium;float: right; margin-top: 10px" value="search" name="submit">
-
-
+                    <div class="col s2">
+                        <input type="submit" class="material-icons btn-floating"  style="border:0px;color:white;font-size:x-large; margin-top: 40%;" value="search" name="submit">
+                    </div>
                 </div>
-
-<!--                <div class="col s12">-->
+                <!--                <div class="col s12">-->
 <!--                    <ul class="collapsible white" data-collapsible="accordion">-->
 <!--                        <li>-->
 <!--                            <div class="collapsible-header black-text">Narrow your search to...-->

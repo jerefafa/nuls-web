@@ -35,10 +35,8 @@ include "startup.php";
     </nav>
 
     <div id="content">
-        <?php
-        include "nav.php";
-        ?>
-        <div id="content">
+
+
         <form action = "lend-or-receive.php" method = "post">
             <div class="row">
                 <h6><b>Student Information</b></h6><br>
@@ -57,7 +55,7 @@ include "startup.php";
                     <button type="submit" class="waves-effect waves-light btn active" style="margin-top: 6%" type="submit" value="search" name="lendButton">Lend</button>
                 </div>
             </div>
-        </div>
+
         </form>
 
     </div>

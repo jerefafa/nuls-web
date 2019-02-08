@@ -35,9 +35,6 @@ include "startup.php";
     </nav>
 
     <div id="content">
-        <?php
-        include "nav.php";
-        ?>
         <form action="ListOfCheckout.php" method="get">
         <div class="row">
             <div class="col s12 m4 l3"></div>

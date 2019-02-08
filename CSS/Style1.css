@@ -23,12 +23,15 @@ html, body{
 }
 
 .nav-background{
-    background: linear-gradient(#141e30, #243b55);
+    background: #35408E;
+    border-bottom:2px solid rgb(255, 212, 28);padding-bottom:20px;
+    color: #FDFDFD;
+
 }
 
 .sidebar-header{
-    background-color: #09203f;
-    color: #FDFDFD;
+    background-color: #35408E;
+    border-bottom:2px solid rgb(255, 212, 28);padding-bottom:20px;
 }
 
 .sidebar-background{
@@ -36,7 +39,7 @@ html, body{
 }
 
 .material-icons{
-    color: #33408e;
+    color: #FFFFFF;
 }
 
 .btn{

@@ -35,9 +35,7 @@ include "startup.php";
     </nav>
 
     <div id="content">
-        <?php
-        include "nav.php";
-        ?>
+
         <div class="row">
             <form action="lend-or-receive.php" method="post">
             <h6><b>Student Information</b></h6><br>

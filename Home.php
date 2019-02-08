@@ -23,14 +23,14 @@ include "startup.php";
     <?php
         include "nav.php";
     ?>
-    <span style="color: whitesmoke; margin-left: 10px">Welcome, <?= $_SESSION['fname'] ?> </span>
+    <span style="color: whitesmoke; float: right;">Welcome, <?= $_SESSION['fname'] ?> </span>
 
     <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
 
 </nav>
 
     <div id="content">
-        <h5 style="margin-top: 5%">Welcome to National University Learning Resource Center</h5>
+        <h5 style="margin-top: 5%; font-family: Verdana, Geneva, sans-serif; font-size: 1.3rem">Welcome to National University Learning Resource Center</h5>
     </div>
 
 </div>
