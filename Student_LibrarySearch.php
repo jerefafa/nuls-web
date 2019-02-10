@@ -58,7 +58,7 @@ $keyword = $_GET['wildcard'];
             <?php
         }
         else{
-        $stmt = $conn->query("SELECT DISTINCT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`acquisition`.`edition`,`acquisition`.`quantity` FROM `acquisitiogn` INNER JOIN `keywords`,`subjects`,`catalog` WHERE (`catalog`.`material_type_id` = '$material_id') AND (`acquisition`.`date_deleted` IS NULL) AND (`catalog`.`acquisition_number` = `acquisition`.`acquisition_number`) AND  ((`acquisition`.`title` LIKE '%$keyword%' OR `acquisition`.`author` LIKE '%$keyword%') OR (`keywords`.`keyword` LIKE '%$keyword%' AND `keywords`.`acquisition_number` = `acquisition`.`acquisition_number`) OR (`subjects`.`subject_name` LIKE '%$keyword%' AND `acquisition`.`subject_id` = `subjects`.`subject_id`))  ORDER BY `acquisition`.`title`");
+        $stmt = $conn->query("SELECT DISTINCT `acquisition`.`acquisition_number`,`acquisition`.`title`,`acquisition`.`author`,`acquisition`.`edition`,`acquisition`.`quantity` FROM `acquisition` INNER JOIN `keywords`,`subjects`,`catalog` WHERE (`catalog`.`material_type_id` = '$material_id') AND (`acquisition`.`date_deleted` IS NULL) AND (`catalog`.`acquisition_number` = `acquisition`.`acquisition_number`) AND  ((`acquisition`.`title` LIKE '%$keyword%' OR `acquisition`.`author` LIKE '%$keyword%') OR (`keywords`.`keyword` LIKE '%$keyword%' AND `keywords`.`acquisition_number` = `acquisition`.`acquisition_number`) OR (`subjects`.`subject_name` LIKE '%$keyword%' AND `acquisition`.`subject_id` = `subjects`.`subject_id`))  ORDER BY `acquisition`.`title`");
         ?>
         <h6><b>Search for (library). Searched in: National University Learning Resource Center</b></h6>
 
