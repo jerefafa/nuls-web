@@ -35,6 +35,7 @@ if(isset($_POST['lendButton'])){
     if(mysqli_num_rows($stmt) > 0 && $flag) {
         while ($row = $stmt->fetch_object()) {
             if ($conn->query("INSERT INTO `circulation`(`barcode`,`borrower_id`,`date_borrowed`,`lender_id`) VALUES('$barcode','$row->user_id','".date('Y-m-d')."','".$_SESSION["user_id"]."') ")) {
+                $conn->query("UPDATE `catalog` SET `is_borrowed`='1' WHERE `barcode` = '" . $barcode . "'");
                 echo "<script>
                 swal('','Book successfully lent','success');
                 setInterval(() => {
@@ -64,6 +65,7 @@ if(isset($_POST['lendButton'])){
         $stmt = $conn->query("SELECT * FROM `circulation` INNER JOIN `fines` WHERE `fines`.`circulation_id` = `circulation`.`circulation_id` AND `circulation`.`barcode` = '" . $barcode . "' AND `fines`.`is_paid` = '0'");
         if (!mysqli_num_rows($stmt)) {
             if ($conn->query("UPDATE `circulation` SET `date_returned` = '" . date('Y-m-d') . "', `receiver_id` = '" . $_SESSION["user_id"] . "' WHERE `barcode` = '$barcode'")) {
+                $conn->query("UPDATE `catalog` SET `is_borrowed`='0' WHERE `barcode` = '".$barcode."'");
                 echo "<script>swal('','Book Received Successfully','success')
         setInterval(() => {
             window.history.back();
