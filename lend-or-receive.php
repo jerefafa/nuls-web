@@ -25,7 +25,7 @@ if(isset($_POST['lendButton'])){
         echo "<script>
             swal('','Barcode Doesn\'t Exist','error');
             setInterval(() => {
-                window.history.back();
+                location.href = 'Lend.php';
             }, 2000)
         </script>";
     }
@@ -39,7 +39,7 @@ if(isset($_POST['lendButton'])){
                 echo "<script>
                 swal('','Book successfully lent','success');
                 setInterval(() => {
-                    window.history.back();
+                    location.href = 'Lend.php';
                 },2000);
 </script>";
             }
@@ -47,7 +47,7 @@ if(isset($_POST['lendButton'])){
     } else {
         echo "<script>swal('','Could not find id number or barcode','error');
         setInterval(() => {
-            window.history.back();
+            location.href='Lend.php';
         }, 2000);
 </script>";
     }
@@ -57,33 +57,44 @@ if(isset($_POST['lendButton'])){
         echo "<script>
         swal('','Book does not belong in the library', 'error');
         setTimeout(() => {
-            window.history.back();
+            location.href = 'Receive.php';
         },2000);
 </script>";
     }
     else {
-        $stmt = $conn->query("SELECT * FROM `circulation` INNER JOIN `fines` WHERE `fines`.`circulation_id` = `circulation`.`circulation_id` AND `circulation`.`barcode` = '" . $barcode . "' AND `fines`.`is_paid` = '0'");
+        if(mysqli_num_rows($conn->query("SELECT * FROM `circulation` WHERE `barcode` = '$barcode' AND `date_returned` IS NULL")) < 1) {
+            echo "<script>
+            swal('','Book is not listed as borrowed', 'error');
+            setTimeout(() => {
+                location.href = 'Receive.php';
+            },2000);
+    </script>";
+        }
+        else {
+            $stmt = $conn->query("SELECT * FROM `circulation` INNER JOIN `fines` WHERE `fines`.`circulation_id` = `circulation`.`circulation_id` AND `circulation`.`barcode` = '" . $barcode . "' AND `fines`.`is_paid` = '0'");
         if (!mysqli_num_rows($stmt)) {
             if ($conn->query("UPDATE `circulation` SET `date_returned` = '" . date('Y-m-d') . "', `receiver_id` = '" . $_SESSION["user_id"] . "' WHERE `barcode` = '$barcode'")) {
                 $conn->query("UPDATE `catalog` SET `is_borrowed`='0' WHERE `barcode` = '".$barcode."'");
                 echo "<script>swal('','Book Received Successfully','success')
         setInterval(() => {
-            window.history.back();
+            location.href = 'Receive.php';
         },2000);
 </script>";
             } else {
                 echo "<script>swal('','Book Receiving Failed','error')
         setInterval(() => {
-            window.history.back();
+            location.href = 'Receive.php';
         },2000);
 </script>";
             }
         } else {
             echo "<script>swal('','Book still have fines','error')
         setInterval(() => {
-            window.history.back();
+            location.href = 'Receive.php;
         },2000);
 </script>";
+        }
+    
         }
     }
 }
